@@ -180,7 +180,7 @@ const Home = () => {
                   <TokenSymbol symbol="HSHARE" />
                   <StyledBalance>
                     <StyledValue>{displayTshareBalance}</StyledValue>
-                    <Label text=" DAISHARE available" />
+                    <Label text=" XSHARE available" />
                     <span style={{ fontSize: '15px', marginLeft:'2%' }}> (${tshareBalanceinDollars ? tshareBalanceinDollars : '-.----'})</span>
                   </StyledBalance>
                 </StyledBalanceWrapper>
@@ -204,7 +204,7 @@ const Home = () => {
               <h1>Snowy Owl Finance</h1>
               <h4 style={{ color: '#FFAE00', marginTop:'4%' }}>Bringing more degens and utility to the Gnosis Chain.</h4>
               <h4 style={{ color: '#FFAE00' }}>$SNO is pegged at a ratio of 1:1 with Gnosis.</h4>
-              <h4 style={{ color: '#FFAE00', marginBottom: '3%' }}>Earn and stake $DAISHARE to help peg $SNO with seigniorage.</h4>
+              <h4 style={{ color: '#FFAE00', marginBottom: '3%' }}>Earn and stake $XSHARE to help peg $SNO with seigniorage.</h4>
 
             </Box>
 
@@ -305,7 +305,7 @@ const Home = () => {
                <Box align='center' mt={2}>
                   <TokenSymbol symbol="HSHARE" />
               </Box>
-              <h2 align='center'>DAISHARE</h2>
+              <h2 align='center'>XSHARE</h2>
               <p align='center'>Current Price</p>
               <Box align='center'>
                 <span style={{ fontSize: '30px' }}>{tSharePriceInFTM ? tSharePriceInFTM : '-.----'} <img alt="logo" style={{ width: '30px'}} src={AvaxLogo} /></span>
@@ -407,13 +407,13 @@ const Home = () => {
         <Grid item xs={12} sm={6}>
           <Card>
             <CardContent align="center">
-              <h2>DAISHARE-wXDAI LP</h2>
+              <h2>XSHARE-wXDAI LP</h2>
               <Box mt={2}>
                   <TokenSymbol symbol="HSHARE-AVAX-LP" />
               </Box>
               <Box mt={2}>
                 <span style={{ fontSize: '26px' }}>
-                  {tshareLPStats?.tokenAmount ? tshareLPStats?.tokenAmount : '-.--'} DAISHARE /{' '}
+                  {tshareLPStats?.tokenAmount ? tshareLPStats?.tokenAmount : '-.--'} XSHARE /{' '}
                   {tshareLPStats?.ftmAmount ? tshareLPStats?.ftmAmount : '-.--'} wXDAI
                 </span>
               </Box>
