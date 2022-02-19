@@ -64,22 +64,22 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   sort: the order of the pool
   */
   // SnoGnoLPGenesis: {
-  //   name: 'Farm SNO-GNO HLP, earn SNO',
+  //   name: 'Farm SNO-JOE HLP, earn SNO',
   //   poolId: 0,
   //   sectionInUI: 0,
   //   contract: 'SnoGnoLPGenesis',
-  //   depositTokenName: 'SNO-GNO-LP',
+  //   depositTokenName: 'SNO-JOE-LP',
   //   earnTokenName: 'SNO',
   //   finished: false,
   //   sort: 1,
   //   closedForStaking: false,
   // },
   // GnoGenesis: {
-  //   name: 'Stake GNO, earn SNO',
+  //   name: 'Stake JOE, earn SNO',
   //   poolId: 0,
   //   sectionInUI: 0,
   //   contract: 'GnoGenesis',
-  //   depositTokenName: 'GNO',
+  //   depositTokenName: 'JOE',
   //   earnTokenName: 'SNO',
   //   finished: false,
   //   sort: 2,

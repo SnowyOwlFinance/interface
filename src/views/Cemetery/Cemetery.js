@@ -10,6 +10,7 @@ import UnlockWallet from '../../components/UnlockWallet';
 import Page from '../../components/Page';
 import CemeteryCard from './CemeteryCard';
 import GenesisCard from './GenesisCard';
+import GenLPCard from './GenLPCard';
 import CemeteryImage from '../../assets/img/background.jpg';
 import { createGlobalStyle } from 'styled-components';
 
@@ -52,7 +53,7 @@ const Cemetery = () => {
                     Genesis Pools
                   </Typography>
                   <Grid container spacing={3}>
-                    <GenesisCard />
+                    <GenLPCard />
                   </Grid>
                 </div>
 {/* 

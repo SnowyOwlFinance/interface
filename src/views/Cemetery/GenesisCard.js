@@ -12,7 +12,7 @@ const GenesisCard = () => {
     <Card>
       <CardContent align="center">
           <Typography variant="h5" component="h2">
-              SNO-GNO HLP
+              SNO-JOE HLP
             </Typography>
         <Box mt={2}>
             <TokenSymbol symbol="HERMES-AVAX-LP" />
@@ -34,7 +34,7 @@ const GenesisCard = () => {
     <Card>
       <CardContent align="center">
           <Typography variant="h5" component="h2">
-              GNO
+              JOE
             </Typography>
         <Box mt={2}>
             <TokenSymbol symbol="HERMES-AVAX-LP" />

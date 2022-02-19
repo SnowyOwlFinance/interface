@@ -50,9 +50,8 @@ const Footer = () => {
         <Grid container>
           <Grid item xs={12}>
             <Typography variant="body2" style={{ color: "#000000"}} align="center">
-              {'Copyright © '}
               <Link color="inherit" href="/">
-                Hermes Finance
+                Snowy Owl Finance
               </Link>{' '}
               {new Date().getFullYear()}
             </Typography>

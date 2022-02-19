@@ -93,7 +93,7 @@ const Masonry = () => {
                     <h3 style={{ textAlign: 'center', color: '#FFAE00', fontSize:'18px'}}>
                       SNO Price<small> (TWAP)</small>
                     </h3>
-                    <h2 style={{ fontWeight: 'lighter'}}>{scalingFactor} GNO</h2>
+                    <h2 style={{ fontWeight: 'lighter'}}>{scalingFactor} JOE</h2>
                   </CardContent>
                 </Card>
               </Grid>
