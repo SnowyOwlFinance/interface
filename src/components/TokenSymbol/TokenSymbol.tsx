@@ -27,8 +27,8 @@ const logosBySymbol: { [title: string]: string } = {
   BOO: booLogo,
   SHIBA: shibaLogo,
   ZOO: zooLogo,
-  'HERMES-AVAX-LP': tombFtmLpLogo,
-  'HSHARE-AVAX-LP': tshareFtmLpLogo,
+  'SNO-JOE-LP': tombFtmLpLogo,
+  'SNOSHARE-SNO-LP': tshareFtmLpLogo,
 };
 
 type LogoProps = {

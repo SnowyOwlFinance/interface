@@ -15,7 +15,7 @@ const GenesisCard = () => {
               SNO-JOE HLP
             </Typography>
         <Box mt={2}>
-            <TokenSymbol symbol="HERMES-AVAX-LP" />
+            <TokenSymbol symbol="SNO-JOE-LP" />
         </Box>
         <Box mt={2}>
             <span style={{ fontSize: '18px' }}>
@@ -37,7 +37,7 @@ const GenesisCard = () => {
               JOE
             </Typography>
         <Box mt={2}>
-            <TokenSymbol symbol="HERMES-AVAX-LP" />
+            <TokenSymbol symbol="SNO-JOE-LP" />
         </Box>
         <Box mt={2}>
             <span style={{ fontSize: '18px' }}>
@@ -59,7 +59,7 @@ const GenesisCard = () => {
             wXDAI
               </Typography>
           <Box mt={2}>
-              <TokenSymbol symbol="HSHARE-AVAX-LP" />
+              <TokenSymbol symbol="SNOSHARE-SNO-LP" />
           </Box>
           <Box mt={2}>
             <span style={{ fontSize: '18px' }}>
@@ -81,7 +81,7 @@ const GenesisCard = () => {
             wETH
               </Typography>
           <Box mt={2}>
-              <TokenSymbol symbol="HSHARE-AVAX-LP" />
+              <TokenSymbol symbol="SNOSHARE-SNO-LP" />
           </Box>
           <Box mt={2}>
             <span style={{ fontSize: '18px' }}>

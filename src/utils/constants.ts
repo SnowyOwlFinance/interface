@@ -1,8 +1,8 @@
-export const TOMB_TICKER = 'HERMES';
-export const TSHARE_TICKER = 'HSHARE';
-export const TBOND_TICKER = 'HBOND';
-export const FTM_TICKER = 'AVAX';
-export const WFTM_TICKER = 'WAVAX';
-export const SPOOKY_ROUTER_ADDR = '0xE54Ca86531e17Ef3616d22Ca28b0D458b6C89106';
-export const ZAPPER_ROUTER_ADDR = '0x7AeeD0a4720874aBaAE9a4CB79f1Bfb72B600Ad0';
-export const TAX_OFFICE_ADDR = '0xcaf6C0FB8Bcb737C2D5D7e5Db615147a26091De1';
+export const TOMB_TICKER = 'SNO';
+export const TSHARE_TICKER = 'SNOSHARE';
+export const TBOND_TICKER = 'SNOBOND';
+export const FTM_TICKER = 'JOE';
+export const WFTM_TICKER = 'JOE';
+export const SPOOKY_ROUTER_ADDR = '0x60aE616a2155Ee3d9A68541Ba4544862310933d4';
+export const ZAPPER_ROUTER_ADDR = '0x';
+export const TAX_OFFICE_ADDR = '0x';

@@ -4786,7 +4786,7 @@
 		]
   },
   "TombFtmRewardPool": {
-    "address": "0x6924021135712940A2AeB97ff8676DcA3247259d",
+    "address": "0x488658942104F6743826276387045FE659aB7Db8",
     "abi": [
       {
         "inputs": [
@@ -5272,7 +5272,7 @@
     ]
   },
   "TombBooGenesisRewardPool": {
-    "address": "0x6924021135712940A2AeB97ff8676DcA3247259d",
+    "address": "0x488658942104F6743826276387045FE659aB7Db8",
     "abi": [
       {
         "inputs": [
@@ -5758,7 +5758,7 @@
     ]
   },
   "TombZooGenesisRewardPool": {
-    "address": "0x6924021135712940A2AeB97ff8676DcA3247259d",
+    "address": "0x488658942104F6743826276387045FE659aB7Db8",
     "abi": [
       {
         "inputs": [
@@ -6244,7 +6244,7 @@
     ]
   },
   "TombShibaGenesisRewardPool": {
-    "address": "0x6924021135712940A2AeB97ff8676DcA3247259d",
+    "address": "0x488658942104F6743826276387045FE659aB7Db8",
     "abi": [
       {
         "inputs": [
@@ -6730,7 +6730,7 @@
     ]
   },
   "TombFtmLpTombRewardPool": {
-    "address": "0x6924021135712940A2AeB97ff8676DcA3247259d",
+    "address": "0x488658942104F6743826276387045FE659aB7Db8",
     "abi": [
       {
         "inputs": [
@@ -7221,7 +7221,7 @@
     ]
   },
   "TombFtmLpTombRewardPoolOld": {
-    "address": "0x6924021135712940A2AeB97ff8676DcA3247259d",
+    "address": "0x488658942104F6743826276387045FE659aB7Db8",
     "abi": [
       {
         "inputs": [
@@ -7712,7 +7712,7 @@
     ]
   },
   "HermesAvaxLPHShareRewardPool": {
-    "address": "0x6924021135712940A2AeB97ff8676DcA3247259d",
+    "address": "0x488658942104F6743826276387045FE659aB7Db8",
     "abi":  [
 			{
 				"inputs": [
@@ -8198,7 +8198,7 @@
 		]
   },
   "HshareAvaxLPHShareRewardPool": {
-    "address": "0x6924021135712940A2AeB97ff8676DcA3247259d",
+    "address": "0x488658942104F6743826276387045FE659aB7Db8",
     "abi": [
 			{
 				"inputs": [

@@ -7,8 +7,8 @@ import TokenSymbol from '../../components/TokenSymbol';
 import useLpStats from '../../hooks/useLpStats';
 
 const CemeteryCard = () => {
-  const tombFtmLpStats = useLpStats('HERMES-AVAX-LP');
-  const tShareFtmLpStats = useLpStats('HSHARE-AVAX-LP');
+  const tombFtmLpStats = useLpStats('SNO-JOE-LP');
+  const tShareFtmLpStats = useLpStats('SNOSHARE-SNO-LP');
   const tombLPStats = useMemo(() => (tombFtmLpStats ? tombFtmLpStats : null), [tombFtmLpStats]);
   const tshareLPStats = useMemo(() => (tShareFtmLpStats ? tShareFtmLpStats : null), [tShareFtmLpStats]);
   return (
@@ -17,10 +17,10 @@ const CemeteryCard = () => {
     <Card>
       <CardContent align="center">
           <Typography variant="h5" component="h2">
-              HERMES-AVAX-LP
+              SNO-JOE-LP
             </Typography>
         <Box mt={2}>
-            <TokenSymbol symbol="HERMES-AVAX-LP" />
+            <TokenSymbol symbol="SNO-JOE-LP" />
         </Box>
         <Box mt={2}>
         </Box>
@@ -47,10 +47,10 @@ const CemeteryCard = () => {
       <Card>
         <CardContent align="center">
             <Typography variant="h5" component="h2">
-            HSHARE-AVAX-LP
+            SNOSHARE-SNO-LP
               </Typography>
           <Box mt={2}>
-              <TokenSymbol symbol="HSHARE-AVAX-LP" />
+              <TokenSymbol symbol="SNOSHARE-SNO-LP" />
           </Box>
           <Box mt={2}>
           </Box>

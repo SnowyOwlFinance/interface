@@ -49,8 +49,8 @@ const useStyles = makeStyles((theme) => ({
 const Home = () => {
   const classes = useStyles();
   const TVL = useTotalValueLocked();
-  const tombFtmLpStats = useLpStats('HERMES-AVAX-LP');
-  const tShareFtmLpStats = useLpStats('HSHARE-AVAX-LP');
+  const tombFtmLpStats = useLpStats('SNO-JOE-LP');
+  const tShareFtmLpStats = useLpStats('SNOSHARE-SNO-LP');
   const tombStats = useTombStats();
   const tShareStats = usetShareStats();
   const tBondStats = useBondStats();
@@ -388,7 +388,7 @@ const Home = () => {
             <CardContent align="center">
               <h2>SNO-JOE LP</h2>
               <Box mt={2}>
-                  <TokenSymbol symbol="HERMES-AVAX-LP" />
+                  <TokenSymbol symbol="SNO-JOE-LP" />
               </Box>
               <Box mt={2}>
                 <span style={{ fontSize: '26px' }}>
@@ -409,7 +409,7 @@ const Home = () => {
             <CardContent align="center">
               <h2>SNOSHARE-wXDAI LP</h2>
               <Box mt={2}>
-                  <TokenSymbol symbol="HSHARE-AVAX-LP" />
+                  <TokenSymbol symbol="SNOSHARE-SNO-LP" />
               </Box>
               <Box mt={2}>
                 <span style={{ fontSize: '26px' }}>
