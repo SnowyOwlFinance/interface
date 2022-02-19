@@ -63,7 +63,18 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   finished: will disable the pool on the UI if set to true
   sort: the order of the pool
   */
-  HermesAvaxLPHShareRewardPool: {
+ SnoJoeLPGenesisRewardPool: {
+  name: 'Earn SNO by SNO-JOE LP',
+  poolId: 0,
+  sectionInUI: 2,
+  contract: 'SnoJoeLPGenesisRewardPool',
+  depositTokenName: 'SNO-JOE-LP',
+  earnTokenName: 'SNO',
+  finished: false,
+  sort: 0,
+  closedForStaking: false
+ },
+  /*HermesAvaxLPHShareRewardPool: {
     name: 'Earn HSHARE by HERMES-AVAX LP',
     poolId: 0,
     sectionInUI: 2,
@@ -84,7 +95,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     finished: false,
     sort: 7,
     closedForStaking: false,
-  },
+  },*/
 };
 
 export default configurations[process.env.NODE_ENV || 'development'];

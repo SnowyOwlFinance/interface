@@ -46,9 +46,9 @@ export class TombFinance {
     for (const [symbol, [address, decimal]] of Object.entries(externalTokens)) {
       this.externalTokens[symbol] = new ERC20(address, provider, symbol, decimal);
     }
-    this.TOMB = new ERC20(deployments.tomb.address, provider, 'HERMES');
-    this.TSHARE = new ERC20(deployments.tShare.address, provider, 'HSHARE');
-    this.TBOND = new ERC20(deployments.tBond.address, provider, 'HBOND');
+    this.TOMB = new ERC20(deployments.tomb.address, provider, 'SNO');
+    this.TSHARE = new ERC20(deployments.tShare.address, provider, 'SNOSHARE');
+    this.TBOND = new ERC20(deployments.tBond.address, provider, 'SNOBOND');
     this.FTM = this.externalTokens['WFTM'];
 
     // Uniswap V2 Pair
@@ -124,8 +124,8 @@ export class TombFinance {
     const lpToken = this.externalTokens[name];
     const lpTokenSupplyBN = await lpToken.totalSupply();
     const lpTokenSupply = getDisplayBalance(lpTokenSupplyBN, 18);
-    const token0 = name.startsWith('HERMES') ? this.TOMB : this.TSHARE;
-    const isTomb = name.startsWith('HERMES');
+    const token0 = name.startsWith('SNO') ? this.TOMB : this.TSHARE;
+    const isTomb = name.startsWith('SNO');
     const tokenAmountBN = await token0.balanceOf(lpToken.address);
     const tokenAmount = getDisplayBalance(tokenAmountBN, 18);
 
