@@ -11,7 +11,7 @@ const configurations: { [env: string]: Configuration } = {
     defaultProvider: 'https://api.avax.network/ext/bc/C/rpc',
     deployments: require('./tomb-finance/deployments/deployments.mainnet.json'),
     externalTokens: {
-      WFTM: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 18],
+      WFTM: ['0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd', 18],
       FUSDT: ['0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664', 6], // This is actually usdc on mainnet not fusdt
       BOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 18],
       ZOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 0],
@@ -32,7 +32,7 @@ const configurations: { [env: string]: Configuration } = {
     defaultProvider: 'https://api.avax.network/ext/bc/C/rpc',
     deployments: require('./tomb-finance/deployments/deployments.mainnet.json'),
     externalTokens: {
-      WFTM: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 18],
+      WFTM: ['0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd', 18],
       FUSDT: ['0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664', 6], // This is actually usdc on mainnet not fusdt
       BOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 18],
       ZOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 0],
