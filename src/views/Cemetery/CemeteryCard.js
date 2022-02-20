@@ -40,7 +40,7 @@ const CemeteryCard = () => {
           <Button color="primary" size='large' style={{ width: '200px', height: "45px", marginBottom: '5%' }} variant="contained" component={Link} to={`/farms/SnoJoeLPSnoShareRewardPool/`}>
             Farm
           </Button>
-          <Button color="primary" size='large' style={{ width: '200px', height: "45px", marginBottom: '5%' }} variant="contained" to="https://traderjoexyz.com/pool/0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D/0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd">
+          <Button color="primary" size='large' target="_blank" style={{ width: '200px', height: "45px", marginBottom: '5%' }} variant="contained" href="https://traderjoexyz.com/pool/0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D/0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd">
               Add Liquidity
             </Button>
         </CardActions>
@@ -74,7 +74,7 @@ const CemeteryCard = () => {
             <Button color="primary" size='large' style={{ width: '200px', height: "45px", marginBottom: '5%' }} variant="contained" component={Link} to={`/farms/SnoShareJoeLPSnoShareRewardPool/`}>
               Farm
             </Button>
-            <Button color="primary" target="_blank" size='large' style={{ width: '200px', height: "45px", marginBottom: '5%' }} variant="contained" >
+            <Button color="primary" target="_blank" size='large' style={{ width: '200px', height: "45px", marginBottom: '5%' }} variant="contained" href="https://traderjoexyz.com/pool/0xe7A102Fbc8AB3581d62830DdB599eCCaae5e7875/0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd" >
               Add Liquidity
             </Button>
           </CardActions>
