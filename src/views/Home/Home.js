@@ -277,8 +277,8 @@ const Home = () => {
                 Total Supply:
               </span>
               <span style={{ fontSize: '14px' }}>
-                ${(tombCirculatingSupply * tombPriceInDollars).toFixed(2)} <br />
-                {tombCirculatingSupply} <br />
+                ${((tombCirculatingSupply-20000) * tombPriceInDollars).toFixed(2)} <br />
+                {tombCirculatingSupply-20000} <br />
                 {tombTotalSupply}
               </span>
               </Row>
