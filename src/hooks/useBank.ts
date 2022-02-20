@@ -4,7 +4,11 @@ import { Bank, ContractName } from '../tomb-finance';
 
 const useBank = (contractName: ContractName): Bank => {
   const { banks } = useContext(BanksContext);
-  return banks.find((bank) => contractName.toLowerCase().startsWith(bank.depositTokenName.split("-")[0].toLowerCase()));
+  if (contractName === "SnoShareJoeLPSnoShareRewardPool") {
+    return banks[1]
+  } else {
+    return banks[0]
+  }
 };
 
 export default useBank;

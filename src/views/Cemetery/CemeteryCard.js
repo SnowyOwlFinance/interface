@@ -37,8 +37,8 @@ const CemeteryCard = () => {
         </span>
       </CardContent>
       <CardActions style={{ justifyContent: 'center' }}>
-          <Button color="primary" size='small' style={{ width: '400px'}} variant="contained" component={Link} to={`/farms/SnoJoeLPSnoShareRewardPool/`}>
-            View
+          <Button color="primary" size='large' style={{ width: '275px', height: "45px", marginBottom: '5%' }} variant="contained" component={Link} to={`/farms/SnoJoeLPSnoShareRewardPool/`}>
+            Farm
           </Button>
         </CardActions>
     </Card>
@@ -68,8 +68,8 @@ const CemeteryCard = () => {
               </span>
         </CardContent>
         <CardActions style={{ justifyContent: 'center' }}>
-            <Button color="primary" size='small' style={{ width: '400px'}} variant="contained" component={Link} to={`/farms/SnoShareJoeLPSnoShareRewardPool/`}>
-              View
+            <Button color="primary" size='large' style={{ width: '275px', height: "45px", marginBottom: '5%' }} variant="contained" component={Link} to={`/farms/SnoShareJoeLPSnoShareRewardPool/`}>
+              Farm
             </Button>
           </CardActions>
       </Card>

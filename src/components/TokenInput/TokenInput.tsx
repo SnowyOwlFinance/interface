@@ -14,7 +14,7 @@ const TokenInput: React.FC<TokenInputProps> = ({ max, symbol, onChange, onSelect
   return (
     <StyledTokenInput>
       <StyledMaxText>
-        {max.toLocaleString()} {symbol} Available
+        {max.toLocaleString()} SNOSHARE Available
       </StyledMaxText>
       <Input
         endAdornment={
