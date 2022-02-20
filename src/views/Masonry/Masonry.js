@@ -73,7 +73,7 @@ const Masonry = () => {
               <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>
                 <Card style={{background: '#161414', borderRadius: '15px', height: '100px'}} className={classes.gridItem}>
                   <CardContent>
-                    <h3 style={{ textAlign: 'center', color: '#FFAE00', fontSize:'18px'}}>Next Epoch</h3>
+                    <h3 style={{ textAlign: 'center', color: '#5686d6', fontSize:'18px'}}>Next Epoch</h3>
                     <ProgressCountdown base={moment().toDate()} hideBar={true} deadline={to} description="Next Epoch" />
                   </CardContent>
                 </Card>
@@ -81,7 +81,7 @@ const Masonry = () => {
               <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>
                 <Card style={{background: '#161414', borderRadius: '15px', height: '100px'}} className={classes.gridItem}>
                   <CardContent align="center">
-                    <h3 style={{ textAlign: 'center', color: '#FFAE00', fontSize:'18px'}}>Current Epoch</h3>
+                    <h3 style={{ textAlign: 'center', color: '#5686d6', fontSize:'18px'}}>Current Epoch</h3>
                     <h2 style={{ fontWeight: 'lighter'}}>{Number(currentEpoch)}</h2>
                     
                   </CardContent>
@@ -90,7 +90,7 @@ const Masonry = () => {
               <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>
                 <Card style={{background: '#161414', borderRadius: '15px', height: '100px'}} className={classes.gridItem}>
                   <CardContent align="center">
-                    <h3 style={{ textAlign: 'center', color: '#FFAE00', fontSize:'18px'}}>
+                    <h3 style={{ textAlign: 'center', color: '#5686d6', fontSize:'18px'}}>
                       SNO Price<small> (TWAP)</small>
                     </h3>
                     <h2 style={{ fontWeight: 'lighter'}}>{scalingFactor} JOE</h2>
@@ -100,7 +100,7 @@ const Masonry = () => {
               <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>
                 <Card style={{background: '#161414', borderRadius: '15px', height: '100px'}} className={classes.gridItem}>
                   <CardContent align="center">
-                    <h3 style={{ textAlign: 'center', color: '#FFAE00', fontSize:'18px'}}>APR</h3>
+                    <h3 style={{ textAlign: 'center', color: '#5686d6', fontSize:'18px'}}>APR</h3>
                     <h2 style={{ fontWeight: 'lighter'}}>{masonryAPR.toFixed(2)}%</h2>
                   </CardContent>
                 </Card>
@@ -108,7 +108,7 @@ const Masonry = () => {
               <Grid item xs={12} md={2} lg={2}>
                 <Card style={{background: '#161414', borderRadius: '15px', height: '100px'}} className={classes.gridItem}>
                   <CardContent align="center">
-                    <h3 style={{ textAlign: 'center', color: '#FFAE00', fontSize:'18px'}}>Shares Staked</h3>
+                    <h3 style={{ textAlign: 'center', color: '#5686d6', fontSize:'18px'}}>Shares Staked</h3>
                     <h2 style={{ fontWeight: 'lighter'}}>{getDisplayBalance(totalStaked)}</h2>
                   </CardContent>
                 </Card>

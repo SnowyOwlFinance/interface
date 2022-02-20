@@ -136,7 +136,7 @@ const Home = () => {
   const [onPresentModal] = useModal(
     <Modal>
     <Box p={4}>
-              <h1 style={{ color: '#FFAE00'}}>Welcome to</h1>
+              <h1 style={{ color: '#5686d6'}}>Welcome to</h1>
               <h1>Snowy Owl Finance</h1>
               <p>One of The first algorithmic stablecoin on Avalanche C Chain, pegged to the price of 1 AVAX via seigniorage.</p>
               <p>
@@ -165,7 +165,7 @@ const Home = () => {
         <Card>
           <CardContent style={{ position: 'relative' }}>
             <Box p={4}>
-              <h1 style={{ color: '#FFAE00'}}>My balance</h1>
+              <h1 style={{ color: '#ffffff'}}>My balance</h1>
             </Box>
              <Balances>
                 <StyledBalanceWrapper>
@@ -202,9 +202,9 @@ const Home = () => {
             <Box p={4}>
               <h1>Welcome to</h1>
               <h1>Snowy Owl Finance</h1>
-              <h4 style={{ color: '#FFAE00', marginTop:'4%' }}>Bringing more degens and utility to the Avalanche-C Chain.</h4>
-              <h4 style={{ color: '#FFAE00' }}>$SNO is pegged at a ratio of 1:1 with $JOE.</h4>
-              <h4 style={{ color: '#FFAE00', marginBottom: '3%' }}>Earn and stake $SNOSHARE to help peg $SNO with seigniorage.</h4>
+              <h4 style={{ color: '#5686d6', marginTop:'4%' }}>Bringing more degens and utility to the Avalanche-C Chain.</h4>
+              <h4 style={{ color: '#5686d6' }}>$SNO is pegged at a ratio of 1:1 with $JOE.</h4>
+              <h4 style={{ color: '#5686d6', marginBottom: '3%' }}>Earn and stake $SNOSHARE to help peg $SNO with seigniorage.</h4>
 
             </Box>
 

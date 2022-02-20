@@ -12,9 +12,9 @@ const newTheme = createMuiTheme({
       paper: 'rgba(255, 255, 255, 0.9)',
     },
     primary: {
-      light: '#FFD170',
-      main: '#FFAE00',
-      dark: '#FFD170',
+      light: '#80b0ff',
+      main: '#5686d6',
+      dark: '#80b0ff',
       contrastText: '#000',
     },
     discord :{

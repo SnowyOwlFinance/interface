@@ -48,7 +48,7 @@ const Bank: React.FC = () => {
           <Grid item xs={12} md={2} lg={3} className={classes.gridItem}>
             <Card style={{background: '#161414', borderRadius: '15px', height: '120px'}} className={classes.gridItem}>
               <CardContent style={{ textAlign: 'center' }}>
-                <h3 style={{ color: '#FFAE00'}}>APR</h3>
+                <h3 style={{ color: '#5686d6'}}>APR</h3>
                 <h2 style={{ fontWeight: 'lighter'}}>{bank.closedForStaking ? '0.00' : statsOnPool?.yearlyAPR}%</h2>
               </CardContent>
             </Card>
@@ -56,7 +56,7 @@ const Bank: React.FC = () => {
           <Grid item xs={12} md={2} lg={3} className={classes.gridItem}>
             <Card style={{background: '#161414', borderRadius: '15px', height: '120px'}} className={classes.gridItem}>
               <CardContent style={{ textAlign: 'center' }}>
-                <h3 style={{ color: '#FFAE00'}}>Daily APR</h3>
+                <h3 style={{ color: '#5686d6'}}>Daily APR</h3>
                 <h2 style={{ fontWeight: 'lighter'}}>{bank.closedForStaking ? '0.00' : statsOnPool?.dailyAPR}%</h2>
               </CardContent>
             </Card>
@@ -64,7 +64,7 @@ const Bank: React.FC = () => {
           <Grid item xs={12} md={2} lg={3} className={classes.gridItem}>
             <Card style={{background: '#161414', borderRadius: '15px', height: '120px'}} className={classes.gridItem}>
               <CardContent style={{ textAlign: 'center' }}>
-                <h3 style={{ color: '#FFAE00'}}>Total Value Locked</h3>
+                <h3 style={{ color: '#5686d6'}}>Total Value Locked</h3>
                 <h2 style={{ fontWeight: 'lighter'}}>${statsOnPool?.TVL}</h2>
               </CardContent>
             </Card>

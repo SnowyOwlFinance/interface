@@ -29,7 +29,7 @@ interface StyledButtonProps {
 const StyledButton = styled.button<StyledButtonProps>`
   align-items: center;
   // background-color: ${(props) => props.theme.color.grey[!props.disabled ? 700 : 900]};
-  background-color: ${(props) => (!props.disabled ? '#FFAE00' : props.theme.color.grey[900])};
+  background-color: ${(props) => (!props.disabled ? '#5686d6' : props.theme.color.grey[900])};
   border: 0;
   border-radius: 28px;
   color: ${(props) => (!props.disabled ? props.theme.color.primary.main : props.theme.color.grey[500])};
@@ -47,7 +47,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   width: 56px;
   &:hover {
     // background-color: ${(props) => props.theme.color.grey[800]};
-    background-color: #FFD170;
+    background-color: #80b0ff;
   }
 `;
 

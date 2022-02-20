@@ -24,8 +24,8 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AccountButton from './AccountButton';
 import DiscordImage from '../../assets/img/discord.svg';
-import logo4 from '../../assets/img/logo_hermes4.png';
-import logohshare2 from '../../assets/img/logo_hshare2.png';
+import logo4 from '../../assets/img/sno.png';
+import logohshare2 from '../../assets/img/snoshare.png';
 import useTombStats from '../../hooks/useTombStats';
 import usetShareStats from '../../hooks/usetShareStats';
 
@@ -160,9 +160,9 @@ const Nav = () => {
               </a>
             </Box>
             <div style={{ width: "auto", marginLeft: "auto", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", marginRight: "20px" }}>
-              <img alt='logo4' style={{ width: 50 }} src={String(logo4)} />
+              <img style={{ width: 50 }} src={"/static/media/sno.5382de83.png"} />
               <span style={{ fontSize: '16px', color:'#000000', marginRight: '15px', marginLeft: '10px' }}>${tombPriceInDollars ? tombPriceInDollars	 : '-.--'}</span>
-              <img alt='logoshare' style={{ width: 50 }} src={String(logohshare2)} />
+              <img style={{ width: 50 }} src={"/static/media/snoshare.20c07224.png"} />
               <span style={{ fontSize: '16px', color:'#000000', marginRight: '30px', marginLeft: '10px' }}>${tSharePriceInDollars ? tSharePriceInDollars	 : '-.--'}</span>
             <Button href="https://discord.gg/vYWDJjwfvE" target="_blank" variant="contained" color='secondary' style={{ marginRight: '25px', borderRadius: '14px', width: '60px' }}>
             <img alt='discordlogo' style={{ width: 22 }} src={String(DiscordImage)} />
