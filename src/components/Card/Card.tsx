@@ -9,7 +9,7 @@ const StyledCard = styled.div`
   background: linear-gradient(90deg, rgba(106,106,106,1) 14%, rgba(177,177,177,1) 100%);
   background-position: bottom right;
   border-radius: 15px;
-  color: #FFFFFF !important;
+  color: #FFFFFF;
   display: flex;
   flex: 1;
   flex-direction: column;

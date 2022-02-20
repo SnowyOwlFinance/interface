@@ -58,22 +58,14 @@ const Footer = () => {
           </Grid>
           <Grid item xs={12} style={{ textAlign: 'center', marginTop: '10px' }}>
             <a
-              href="https://twitter.com/hermes_avax"
+              href="https://twitter.com/snowyowlfinance"
               rel="noopener noreferrer"
               target="_blank"
               className={classes.link}
             >
               <img alt="twitter" src={TwitterImage} className={classes.img} />
             </a>
-            <a
-              href="https://github.com/HermesAvax"
-              rel="noopener noreferrer"
-              target="_blank"
-              className={classes.link}
-            >
-              <img alt="github" src={GithubImage} className={classes.img} />
-            </a>
-            <a href="https://discord.gg/Trjv7XC5bT" rel="noopener noreferrer" target="_blank" className={classes.link}>
+            <a href="https://discord.gg/vYWDJjwfvE" rel="noopener noreferrer" target="_blank" className={classes.link}>
               <img alt="discord" src={DiscordImage} className={classes.img} />
             </a>
           </Grid>

@@ -24,7 +24,7 @@ const GenesisCard = () => {
         </Box>
       </CardContent>
       <CardActions style={{ justifyContent: 'center' }}>
-          <Button color="primary" size='small' style={{ width: '200px', height: '40px', marginBottom: '10%' }} variant="contained" component={Link} to={`/crete/HermesAvaxLPHShareRewardPool/`}>
+          <Button color="primary" size='small' style={{ width: '200px', height: '40px', marginBottom: '10%' }} variant="contained" component={Link} to={`/farms/TombAvaxLPHShareRewardPool/`}>
             Stake
           </Button>
         </CardActions>
@@ -46,7 +46,7 @@ const GenesisCard = () => {
         </Box>
       </CardContent>
       <CardActions style={{ justifyContent: 'center' }}>
-          <Button color="primary" size='small' style={{ width: '200px', height: '40px', marginBottom: '10%' }} variant="contained" component={Link} to={`/crete/HermesAvaxLPHShareRewardPool/`}>
+          <Button color="primary" size='small' style={{ width: '200px', height: '40px', marginBottom: '10%' }} variant="contained" component={Link} to={`/farms/TombAvaxLPHShareRewardPool/`}>
             Stake
           </Button>
         </CardActions>
@@ -59,7 +59,7 @@ const GenesisCard = () => {
             wXDAI
               </Typography>
           <Box mt={2}>
-              <TokenSymbol symbol="SNOSHARE-SNO-LP" />
+              <TokenSymbol symbol="SNOSHARE-JOE-LP" />
           </Box>
           <Box mt={2}>
             <span style={{ fontSize: '18px' }}>
@@ -68,7 +68,7 @@ const GenesisCard = () => {
         </Box>
         </CardContent>
         <CardActions style={{ justifyContent: 'center' }}>
-            <Button color="primary" size='small' style={{ width: '200px', height: '40px', marginBottom: '10%' }} variant="contained" component={Link} to={`/crete/HshareAvaxLPHShareRewardPool/`}>
+            <Button color="primary" size='small' style={{ width: '200px', height: '40px', marginBottom: '10%' }} variant="contained" component={Link} to={`/farms/HshareAvaxLPHShareRewardPool/`}>
               Stake
             </Button>
           </CardActions>
@@ -81,7 +81,7 @@ const GenesisCard = () => {
             wETH
               </Typography>
           <Box mt={2}>
-              <TokenSymbol symbol="SNOSHARE-SNO-LP" />
+              <TokenSymbol symbol="SNOSHARE-JOE-LP" />
           </Box>
           <Box mt={2}>
             <span style={{ fontSize: '18px' }}>
@@ -90,7 +90,7 @@ const GenesisCard = () => {
         </Box>
         </CardContent>
         <CardActions style={{ justifyContent: 'center' }}>
-            <Button color="primary" size='small' style={{ width: '200px', height: '40px', marginBottom: '10%' }} variant="contained" component={Link} to={`/crete/HshareAvaxLPHShareRewardPool/`}>
+            <Button color="primary" size='small' style={{ width: '200px', height: '40px', marginBottom: '10%' }} variant="contained" component={Link} to={`/farms/HshareAvaxLPHShareRewardPool/`}>
               Stake
             </Button>
           </CardActions>

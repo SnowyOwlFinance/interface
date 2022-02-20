@@ -10,8 +10,8 @@ const ListItemLink = ({ primary, to }) => {
 
   return (
     <li>
-      <ListItem button component={CustomLink}>
-        <ListItemText primary={primary} />
+      <ListItem button component={CustomLink} sx={{ color: "text.primary" }}>
+        <ListItemText primary={primary} style={{ color: "#000000 !important" }}/>
       </ListItem>
     </li>
   );

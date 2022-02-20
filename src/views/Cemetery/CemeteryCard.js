@@ -8,7 +8,7 @@ import useLpStats from '../../hooks/useLpStats';
 
 const CemeteryCard = () => {
   const tombFtmLpStats = useLpStats('SNO-JOE-LP');
-  const tShareFtmLpStats = useLpStats('SNOSHARE-SNO-LP');
+  const tShareFtmLpStats = useLpStats('SNOSHARE-JOE-LP');
   const tombLPStats = useMemo(() => (tombFtmLpStats ? tombFtmLpStats : null), [tombFtmLpStats]);
   const tshareLPStats = useMemo(() => (tShareFtmLpStats ? tShareFtmLpStats : null), [tShareFtmLpStats]);
   return (
@@ -26,8 +26,8 @@ const CemeteryCard = () => {
         </Box>
         <Box mt={2}>
           <span style={{ fontSize: '26px' }}>
-            {tombLPStats?.tokenAmount ? tombLPStats?.tokenAmount : '-.--'} HERMES /{' '}
-            {tombLPStats?.ftmAmount ? tombLPStats?.ftmAmount : '-.--'} AVAX
+            {tombLPStats?.tokenAmount ? tombLPStats?.tokenAmount : '-.--'} SNO /{' '}
+            {tombLPStats?.ftmAmount ? tombLPStats?.ftmAmount : '-.--'} JOE
           </span>
         </Box>
         <Box>${tombLPStats?.priceOfOne ? tombLPStats.priceOfOne : '-.--'}</Box>
@@ -37,7 +37,7 @@ const CemeteryCard = () => {
         </span>
       </CardContent>
       <CardActions style={{ justifyContent: 'center' }}>
-          <Button color="primary" size='small' style={{ width: '400px'}} variant="contained" component={Link} to={`/crete/HermesAvaxLPHShareRewardPool/`}>
+          <Button color="primary" size='small' style={{ width: '400px'}} variant="contained" component={Link} to={`/farms/SnoJoeLPSnoShareRewardPool/`}>
             View
           </Button>
         </CardActions>
@@ -47,17 +47,17 @@ const CemeteryCard = () => {
       <Card>
         <CardContent align="center">
             <Typography variant="h5" component="h2">
-            SNOSHARE-SNO-LP
+            SNOSHARE-JOE-LP
               </Typography>
           <Box mt={2}>
-              <TokenSymbol symbol="SNOSHARE-SNO-LP" />
+              <TokenSymbol symbol="SNOSHARE-JOE-LP" />
           </Box>
           <Box mt={2}>
           </Box>
           <Box mt={2}>
           <span style={{ fontSize: '26px' }}>
-                  {tshareLPStats?.tokenAmount ? tshareLPStats?.tokenAmount : '-.--'} HSHARE /{' '}
-                  {tshareLPStats?.ftmAmount ? tshareLPStats?.ftmAmount : '-.--'} AVAX
+                  {tshareLPStats?.tokenAmount ? tshareLPStats?.tokenAmount : '-.--'} SNOSHARE /{' '}
+                  {tshareLPStats?.ftmAmount ? tshareLPStats?.ftmAmount : '-.--'} JOE
                 </span>
           </Box>
           <Box>${tshareLPStats?.priceOfOne ? tshareLPStats.priceOfOne : '-.--'}</Box>
@@ -68,7 +68,7 @@ const CemeteryCard = () => {
               </span>
         </CardContent>
         <CardActions style={{ justifyContent: 'center' }}>
-            <Button color="primary" size='small' style={{ width: '400px'}} variant="contained" component={Link} to={`/crete/HshareAvaxLPHShareRewardPool/`}>
+            <Button color="primary" size='small' style={{ width: '400px'}} variant="contained" component={Link} to={`/farms/SnoShareJoeLPSnoShareRewardPool/`}>
               View
             </Button>
           </CardActions>

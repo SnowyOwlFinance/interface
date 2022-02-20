@@ -5,8 +5,8 @@ import Label from '../../components/Label';
 import { getDisplayBalance } from '../../utils/formatBalance';
 import useTokenBalance from '../../hooks/useTokenBalance';
 import HomeImage from '../../assets/img/background.jpg';
-// import CashImage from '../../assets/img/logo_hermes4.png';
-import AvaxLogo from '../../assets/img/avaxlogo.png';
+// import CashImage from '../../assets/img/logo_tomb4.png';
+import AvaxLogo from '../../assets/img/joe.png';
 // import Image from 'material-ui-image';
 // import styled from 'styled-components';
 // import { Alert } from '@material-ui/lab';
@@ -50,7 +50,7 @@ const Home = () => {
   const classes = useStyles();
   const TVL = useTotalValueLocked();
   const tombFtmLpStats = useLpStats('SNO-JOE-LP');
-  const tShareFtmLpStats = useLpStats('SNOSHARE-SNO-LP');
+  const tShareFtmLpStats = useLpStats('SNOSHARE-JOE-LP');
   const tombStats = useTombStats();
   const tShareStats = usetShareStats();
   const tBondStats = useBondStats();
@@ -66,8 +66,8 @@ const Home = () => {
     tShare = tShareProd;
   }
 
-  const buyTombAddress = 'https://app.pangolin.exchange/#/swap?outputCurrency=' + tomb.address;
-  const buyTShareAddress = 'https://app.pangolin.exchange/#/swap?outputCurrency=' + tShare.address;
+  const buyTombAddress = 'https://traderjoexyz.com/trade?outputCurrency=' + tomb.address;
+  const buyTShareAddress = 'https://traderjoexyz.com/trade?outputCurrency=' + tShare.address;
 
   const tombLPStats = useMemo(() => (tombFtmLpStats ? tombFtmLpStats : null), [tombFtmLpStats]);
   const tshareLPStats = useMemo(() => (tShareFtmLpStats ? tShareFtmLpStats : null), [tShareFtmLpStats]);
@@ -125,7 +125,7 @@ const Home = () => {
   `;
 
   const Row = styled.div`
-  font-family: roboto, cursive;
+  font-family: Quicksand, cursive;
   align-items: center;
   display: flex;
   font-size: 16px;
@@ -137,17 +137,17 @@ const Home = () => {
     <Modal>
     <Box p={4}>
               <h1 style={{ color: '#FFAE00'}}>Welcome to</h1>
-              <h1>Hermes Finance</h1>
+              <h1>Snowy Owl Finance</h1>
               <p>One of The first algorithmic stablecoin on Avalanche C Chain, pegged to the price of 1 AVAX via seigniorage.</p>
               <p>
-                Stake your HERMES-AVAX LP in the Crete to earn HSHARE rewards.
-                Then stake your earned HSHARE in the Olympus to earn more HERMES!
+                Stake your TOMB-AVAX LP in the farms to earn HSHARE rewards.
+                Then stake your earned HSHARE in the boardroom to earn more TOMB!
               </p>
-              <StyledLink href='https://github.com/0xGuard-com/audit-reports/blob/master/hermes-finance/Hermes-Finance_final-audit-report.pdf'>Link to Audit Report</StyledLink>
+              <StyledLink href='https://github.com/0xGuard-com/audit-reports/blob/master/tomb-finance/Tomb-Finance_final-audit-report.pdf'>Link to Audit Report</StyledLink>
               <p></p>  
               <img alt='0xguard' src='https://gateway.pinata.cloud/ipfs/QmYBxp5LCFmmYrZcgQQiznhsZkcfQhJ8dvwEgdBPorZ1A7?preview=1' width={200}/>
               <p></p>
-              <StyledLink href='https://rugdoc.io/project/hermes-finance/'>Link to KYC</StyledLink>
+              <StyledLink href='https://rugdoc.io/project/tomb-finance/'>Link to KYC</StyledLink>
               <p></p>  
               <img alt='kyc' src='https://gateway.pinata.cloud/ipfs/QmPDKWKCH8Zr5NHyQ5LzaG3H2xTiU7ui1MvoSagpLFQjWf?preview=1' width={200}/>
 
@@ -169,7 +169,7 @@ const Home = () => {
             </Box>
              <Balances>
                 <StyledBalanceWrapper>
-                  <TokenSymbol symbol="HERMES" />
+                  <TokenSymbol symbol="TOMB" />
                   <StyledBalance>
                       <StyledValue>{displayTombBalance}</StyledValue>
                       <Label text=" SNO available" />
@@ -210,7 +210,7 @@ const Home = () => {
 
             <Grid item xs={20} sm={12} style={{ display: 'flex'}}>
           <Card style={{ borderRadius: '20px', backgroundColor: '#161414'}}>
-            <CardContent style={{ margin: '20px'}}>
+            <CardContent style={{ margin: '37px'}}>
               <h1>Total Value Locked</h1>
               <CountUp style={{ fontSize: '40px' }} end={TVL} separator="," prefix="$" />
             </CardContent>
@@ -230,10 +230,10 @@ const Home = () => {
           <Card style={{ height: '100%' }}>
             <CardContent align="center" style={{ marginTop: '2.5%' }}>
               {/* <h2 style={{ marginBottom: '20px' }}>Wallet Balance</h2> */}
-          {/*    <Button color="primary" href="/olympus" variant="contained" style={{ marginRight: '10px' }}>
+          {/*    <Button color="primary" href="/boardroom" variant="contained" style={{ marginRight: '10px' }}>
                 Stake Now
               </Button>
-              <Button href="/crete" variant="contained" style={{ marginRight: '10px' }}>
+              <Button href="/farms" variant="contained" style={{ marginRight: '10px' }}>
                 Farm Now
               </Button>
               <Button
@@ -244,7 +244,7 @@ const Home = () => {
                 style={{ marginRight: '10px' }}
                 className={classes.button}
               >
-                Buy HERMES
+                Buy TOMB
               </Button>
               <Button variant="contained" target="_blank" href={buyTShareAddress} className={classes.button}>
                 Buy HSHARE
@@ -258,7 +258,7 @@ const Home = () => {
           <Card>
             <CardContent style={{ position: 'relative' }}>
                <Box align='center' mt={2}>
-                  <TokenSymbol symbol="HERMES" />
+                  <TokenSymbol symbol="TOMB" />
               </Box>
               <h2 align='center'>SNO</h2>
               <p align='center'>Current Price</p>
@@ -372,7 +372,7 @@ const Home = () => {
               <Button
                 color="primary"
                 target="_blank"
-                href="/tartarus"
+                href="/bonds"
                 variant="contained"
                 style={{ marginTop: '10px', borderRadius:'10px', width: '100%'}}
                 className={classes.button}
@@ -407,14 +407,14 @@ const Home = () => {
         <Grid item xs={12} sm={6}>
           <Card>
             <CardContent align="center">
-              <h2>SNOSHARE-wXDAI LP</h2>
+              <h2>SNOSHARE-wAVAX LP</h2>
               <Box mt={2}>
-                  <TokenSymbol symbol="SNOSHARE-SNO-LP" />
+                  <TokenSymbol symbol="SNOSHARE-JOE-LP" />
               </Box>
               <Box mt={2}>
                 <span style={{ fontSize: '26px' }}>
                   {tshareLPStats?.tokenAmount ? tshareLPStats?.tokenAmount : '-.--'} SNOSHARE /{' '}
-                  {tshareLPStats?.ftmAmount ? tshareLPStats?.ftmAmount : '-.--'} wXDAI
+                  {tshareLPStats?.ftmAmount ? tshareLPStats?.ftmAmount : '-.--'} wAVAX
                 </span>
               </Box>
               <Box>${tshareLPStats?.priceOfOne ? tshareLPStats.priceOfOne : '-.--'}</Box>

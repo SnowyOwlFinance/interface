@@ -862,7 +862,7 @@
 	  ]
 	},
 	"tomb": {
-	  "address": "0xEb6b7905F18AF6c0E2d3be0757Dc11E8a5B3869B",
+	  "address": "0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D",
 	  "abi": [
 			  {
 				  "inputs": [
@@ -1277,7 +1277,7 @@
 			  },
 			  {
 				  "inputs": [],
-				  "name": "hermesOracle",
+				  "name": "tombOracle",
 				  "outputs": [
 					  {
 						  "internalType": "address",
@@ -1469,11 +1469,11 @@
 				  "inputs": [
 					  {
 						  "internalType": "address",
-						  "name": "_hermesOracle",
+						  "name": "_tombOracle",
 						  "type": "address"
 					  }
 				  ],
-				  "name": "setHermesOracle",
+				  "name": "setTombOracle",
 				  "outputs": [],
 				  "stateMutability": "nonpayable",
 				  "type": "function"
@@ -1750,7 +1750,7 @@
 		  ]
 	},
 	"tShare": {
-	  "address": "0xCA9D941103e343ae7d1F6DA1Fd248F952424F223",
+	  "address": "0xe7A102Fbc8AB3581d62830DdB599eCCaae5e7875",
 	  "abi": [
 			  {
 				  "inputs": [
@@ -2534,7 +2534,7 @@
 		  ]
 	},
 	"tBond": {
-	  "address": "0x3A40d0bBbbC52595De2440c5951ace9d9e9b1fC1",
+	  "address": "0x8aB4Ac266d8e698b7E39f97Ec17876076680f6f1",
 	  "abi": [
 			  {
 				  "inputs": [],
@@ -2979,7 +2979,7 @@
 		  ]
 	},
 	"Treasury": {
-	  "address": "0xd99B7C6baA545575940Fc2B71c20D4532Cf245a7",
+	  "address": "0xFF9f077b63E7f252794c43f7aE6B2A289dc4C158",
 	  "abi": [
 			  {
 				  "anonymous": false,
@@ -2993,7 +2993,7 @@
 					  {
 						  "indexed": false,
 						  "internalType": "uint256",
-						  "name": "hermesAmount",
+						  "name": "tombAmount",
 						  "type": "uint256"
 					  },
 					  {
@@ -3113,7 +3113,7 @@
 					  {
 						  "indexed": false,
 						  "internalType": "uint256",
-						  "name": "hermesAmount",
+						  "name": "tombAmount",
 						  "type": "uint256"
 					  },
 					  {
@@ -3253,7 +3253,7 @@
 				  "inputs": [
 					  {
 						  "internalType": "uint256",
-						  "name": "_hermesAmount",
+						  "name": "_tombAmount",
 						  "type": "uint256"
 					  },
 					  {
@@ -3386,11 +3386,11 @@
 			  },
 			  {
 				  "inputs": [],
-				  "name": "getBurnableHermesLeft",
+				  "name": "getBurnableTombLeft",
 				  "outputs": [
 					  {
 						  "internalType": "uint256",
-						  "name": "_burnableHermesLeft",
+						  "name": "_burnableTombLeft",
 						  "type": "uint256"
 					  }
 				  ],
@@ -3399,7 +3399,7 @@
 			  },
 			  {
 				  "inputs": [],
-				  "name": "getHermesCirculatingSupply",
+				  "name": "getTombCirculatingSupply",
 				  "outputs": [
 					  {
 						  "internalType": "uint256",
@@ -3412,11 +3412,11 @@
 			  },
 			  {
 				  "inputs": [],
-				  "name": "getHermesPrice",
+				  "name": "getTombPrice",
 				  "outputs": [
 					  {
 						  "internalType": "uint256",
-						  "name": "hermesPrice",
+						  "name": "tombPrice",
 						  "type": "uint256"
 					  }
 				  ],
@@ -3425,11 +3425,11 @@
 			  },
 			  {
 				  "inputs": [],
-				  "name": "getHermesUpdatedPrice",
+				  "name": "getTombUpdatedPrice",
 				  "outputs": [
 					  {
 						  "internalType": "uint256",
-						  "name": "_hermesPrice",
+						  "name": "_tombPrice",
 						  "type": "uint256"
 					  }
 				  ],
@@ -3487,7 +3487,7 @@
 			  },
 			  {
 				  "inputs": [],
-				  "name": "hermes",
+				  "name": "tomb",
 				  "outputs": [
 					  {
 						  "internalType": "address",
@@ -3500,7 +3500,7 @@
 			  },
 			  {
 				  "inputs": [],
-				  "name": "hermesOracle",
+				  "name": "tombOracle",
 				  "outputs": [
 					  {
 						  "internalType": "address",
@@ -3513,7 +3513,7 @@
 			  },
 			  {
 				  "inputs": [],
-				  "name": "hermesPriceCeiling",
+				  "name": "tombPriceCeiling",
 				  "outputs": [
 					  {
 						  "internalType": "uint256",
@@ -3526,7 +3526,7 @@
 			  },
 			  {
 				  "inputs": [],
-				  "name": "hermesPriceOne",
+				  "name": "tombPriceOne",
 				  "outputs": [
 					  {
 						  "internalType": "uint256",
@@ -3541,7 +3541,7 @@
 				  "inputs": [
 					  {
 						  "internalType": "address",
-						  "name": "_hermes",
+						  "name": "_tomb",
 						  "type": "address"
 					  },
 					  {
@@ -3556,7 +3556,7 @@
 					  },
 					  {
 						  "internalType": "address",
-						  "name": "_hermesOracle",
+						  "name": "_tombOracle",
 						  "type": "address"
 					  },
 					  {
@@ -3832,7 +3832,7 @@
 			  },
 			  {
 				  "inputs": [],
-				  "name": "previousEpochHermesPrice",
+				  "name": "previousEpochTombPrice",
 				  "outputs": [
 					  {
 						  "internalType": "uint256",
@@ -3973,11 +3973,11 @@
 				  "inputs": [
 					  {
 						  "internalType": "address",
-						  "name": "_hermesOracle",
+						  "name": "_tombOracle",
 						  "type": "address"
 					  }
 				  ],
-				  "name": "setHermesOracle",
+				  "name": "setTombOracle",
 				  "outputs": [],
 				  "stateMutability": "nonpayable",
 				  "type": "function"
@@ -3986,11 +3986,11 @@
 				  "inputs": [
 					  {
 						  "internalType": "uint256",
-						  "name": "_hermesPriceCeiling",
+						  "name": "_tombPriceCeiling",
 						  "type": "uint256"
 					  }
 				  ],
-				  "name": "setHermesPriceCeiling",
+				  "name": "setTombPriceCeiling",
 				  "outputs": [],
 				  "stateMutability": "nonpayable",
 				  "type": "function"
@@ -4234,556 +4234,8 @@
 		  ]
 	},
 	"Masonry": {
-	  "address": "0x367d231003fb1EdCC9dfE11f4DEb4eAC2A2C2e8E",
-	  "abi": [
-			  {
-				  "anonymous": false,
-				  "inputs": [
-					  {
-						  "indexed": true,
-						  "internalType": "address",
-						  "name": "executor",
-						  "type": "address"
-					  },
-					  {
-						  "indexed": false,
-						  "internalType": "uint256",
-						  "name": "at",
-						  "type": "uint256"
-					  }
-				  ],
-				  "name": "Initialized",
-				  "type": "event"
-			  },
-			  {
-				  "anonymous": false,
-				  "inputs": [
-					  {
-						  "indexed": true,
-						  "internalType": "address",
-						  "name": "user",
-						  "type": "address"
-					  },
-					  {
-						  "indexed": false,
-						  "internalType": "uint256",
-						  "name": "reward",
-						  "type": "uint256"
-					  }
-				  ],
-				  "name": "RewardAdded",
-				  "type": "event"
-			  },
-			  {
-				  "anonymous": false,
-				  "inputs": [
-					  {
-						  "indexed": true,
-						  "internalType": "address",
-						  "name": "user",
-						  "type": "address"
-					  },
-					  {
-						  "indexed": false,
-						  "internalType": "uint256",
-						  "name": "reward",
-						  "type": "uint256"
-					  }
-				  ],
-				  "name": "RewardPaid",
-				  "type": "event"
-			  },
-			  {
-				  "anonymous": false,
-				  "inputs": [
-					  {
-						  "indexed": true,
-						  "internalType": "address",
-						  "name": "user",
-						  "type": "address"
-					  },
-					  {
-						  "indexed": false,
-						  "internalType": "uint256",
-						  "name": "amount",
-						  "type": "uint256"
-					  }
-				  ],
-				  "name": "Staked",
-				  "type": "event"
-			  },
-			  {
-				  "anonymous": false,
-				  "inputs": [
-					  {
-						  "indexed": true,
-						  "internalType": "address",
-						  "name": "user",
-						  "type": "address"
-					  },
-					  {
-						  "indexed": false,
-						  "internalType": "uint256",
-						  "name": "amount",
-						  "type": "uint256"
-					  }
-				  ],
-				  "name": "Withdrawn",
-				  "type": "event"
-			  },
-			  {
-				  "inputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "amount",
-						  "type": "uint256"
-					  }
-				  ],
-				  "name": "allocateSeigniorage",
-				  "outputs": [],
-				  "stateMutability": "nonpayable",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [
-					  {
-						  "internalType": "address",
-						  "name": "account",
-						  "type": "address"
-					  }
-				  ],
-				  "name": "balanceOf",
-				  "outputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "",
-						  "type": "uint256"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [
-					  {
-						  "internalType": "address",
-						  "name": "member",
-						  "type": "address"
-					  }
-				  ],
-				  "name": "canClaimReward",
-				  "outputs": [
-					  {
-						  "internalType": "bool",
-						  "name": "",
-						  "type": "bool"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [
-					  {
-						  "internalType": "address",
-						  "name": "member",
-						  "type": "address"
-					  }
-				  ],
-				  "name": "canWithdraw",
-				  "outputs": [
-					  {
-						  "internalType": "bool",
-						  "name": "",
-						  "type": "bool"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "claimReward",
-				  "outputs": [],
-				  "stateMutability": "nonpayable",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [
-					  {
-						  "internalType": "address",
-						  "name": "member",
-						  "type": "address"
-					  }
-				  ],
-				  "name": "earned",
-				  "outputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "",
-						  "type": "uint256"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "epoch",
-				  "outputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "",
-						  "type": "uint256"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "exit",
-				  "outputs": [],
-				  "stateMutability": "nonpayable",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "getHermesPrice",
-				  "outputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "",
-						  "type": "uint256"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [
-					  {
-						  "internalType": "address",
-						  "name": "member",
-						  "type": "address"
-					  }
-				  ],
-				  "name": "getLastSnapshotIndexOf",
-				  "outputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "",
-						  "type": "uint256"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [
-					  {
-						  "internalType": "contract IERC20",
-						  "name": "_token",
-						  "type": "address"
-					  },
-					  {
-						  "internalType": "uint256",
-						  "name": "_amount",
-						  "type": "uint256"
-					  },
-					  {
-						  "internalType": "address",
-						  "name": "_to",
-						  "type": "address"
-					  }
-				  ],
-				  "name": "governanceRecoverUnsupported",
-				  "outputs": [],
-				  "stateMutability": "nonpayable",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "hermes",
-				  "outputs": [
-					  {
-						  "internalType": "contract IERC20",
-						  "name": "",
-						  "type": "address"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [
-					  {
-						  "internalType": "contract IERC20",
-						  "name": "_hermes",
-						  "type": "address"
-					  },
-					  {
-						  "internalType": "contract IERC20",
-						  "name": "_share",
-						  "type": "address"
-					  },
-					  {
-						  "internalType": "contract ITreasury",
-						  "name": "_treasury",
-						  "type": "address"
-					  }
-				  ],
-				  "name": "initialize",
-				  "outputs": [],
-				  "stateMutability": "nonpayable",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "initialized",
-				  "outputs": [
-					  {
-						  "internalType": "bool",
-						  "name": "",
-						  "type": "bool"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "latestSnapshotIndex",
-				  "outputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "",
-						  "type": "uint256"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [
-					  {
-						  "internalType": "address",
-						  "name": "",
-						  "type": "address"
-					  }
-				  ],
-				  "name": "members",
-				  "outputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "lastSnapshotIndex",
-						  "type": "uint256"
-					  },
-					  {
-						  "internalType": "uint256",
-						  "name": "rewardEarned",
-						  "type": "uint256"
-					  },
-					  {
-						  "internalType": "uint256",
-						  "name": "epochTimerStart",
-						  "type": "uint256"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "nextEpochPoint",
-				  "outputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "",
-						  "type": "uint256"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "",
-						  "type": "uint256"
-					  }
-				  ],
-				  "name": "olympusHistory",
-				  "outputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "time",
-						  "type": "uint256"
-					  },
-					  {
-						  "internalType": "uint256",
-						  "name": "rewardReceived",
-						  "type": "uint256"
-					  },
-					  {
-						  "internalType": "uint256",
-						  "name": "rewardPerShare",
-						  "type": "uint256"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "operator",
-				  "outputs": [
-					  {
-						  "internalType": "address",
-						  "name": "",
-						  "type": "address"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "rewardLockupEpochs",
-				  "outputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "",
-						  "type": "uint256"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "rewardPerShare",
-				  "outputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "",
-						  "type": "uint256"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "_withdrawLockupEpochs",
-						  "type": "uint256"
-					  },
-					  {
-						  "internalType": "uint256",
-						  "name": "_rewardLockupEpochs",
-						  "type": "uint256"
-					  }
-				  ],
-				  "name": "setLockUp",
-				  "outputs": [],
-				  "stateMutability": "nonpayable",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [
-					  {
-						  "internalType": "address",
-						  "name": "_operator",
-						  "type": "address"
-					  }
-				  ],
-				  "name": "setOperator",
-				  "outputs": [],
-				  "stateMutability": "nonpayable",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "share",
-				  "outputs": [
-					  {
-						  "internalType": "contract IERC20",
-						  "name": "",
-						  "type": "address"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "amount",
-						  "type": "uint256"
-					  }
-				  ],
-				  "name": "stake",
-				  "outputs": [],
-				  "stateMutability": "nonpayable",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "totalSupply",
-				  "outputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "",
-						  "type": "uint256"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "treasury",
-				  "outputs": [
-					  {
-						  "internalType": "contract ITreasury",
-						  "name": "",
-						  "type": "address"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "amount",
-						  "type": "uint256"
-					  }
-				  ],
-				  "name": "withdraw",
-				  "outputs": [],
-				  "stateMutability": "nonpayable",
-				  "type": "function"
-			  },
-			  {
-				  "inputs": [],
-				  "name": "withdrawLockupEpochs",
-				  "outputs": [
-					  {
-						  "internalType": "uint256",
-						  "name": "",
-						  "type": "uint256"
-					  }
-				  ],
-				  "stateMutability": "view",
-				  "type": "function"
-			  }
-		  ]
+	  "address": "0x264C36747b6cC5243d8999345FFf8F220B7CCc77",
+	  "abi": [{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"executor","type":"address"},{"indexed":false,"internalType":"uint256","name":"at","type":"uint256"}],"name":"Initialized","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"user","type":"address"},{"indexed":false,"internalType":"uint256","name":"reward","type":"uint256"}],"name":"RewardAdded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"user","type":"address"},{"indexed":false,"internalType":"uint256","name":"reward","type":"uint256"}],"name":"RewardPaid","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"user","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"Staked","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"user","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"Withdrawn","type":"event"},{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"allocateSeigniorage","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"mason","type":"address"}],"name":"canClaimReward","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"mason","type":"address"}],"name":"canWithdraw","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"claimReward","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"mason","type":"address"}],"name":"earned","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"epoch","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"exit","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"mason","type":"address"}],"name":"getLastSnapshotIndexOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getTombPrice","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"contract IERC20","name":"_token","type":"address"},{"internalType":"uint256","name":"_amount","type":"uint256"},{"internalType":"address","name":"_to","type":"address"}],"name":"governanceRecoverUnsupported","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"contract IERC20","name":"_tomb","type":"address"},{"internalType":"contract IERC20","name":"_share","type":"address"},{"internalType":"contract ITreasury","name":"_treasury","type":"address"}],"name":"initialize","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"initialized","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"latestSnapshotIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"masonryHistory","outputs":[{"internalType":"uint256","name":"time","type":"uint256"},{"internalType":"uint256","name":"rewardReceived","type":"uint256"},{"internalType":"uint256","name":"rewardPerShare","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"masons","outputs":[{"internalType":"uint256","name":"lastSnapshotIndex","type":"uint256"},{"internalType":"uint256","name":"rewardEarned","type":"uint256"},{"internalType":"uint256","name":"epochTimerStart","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"nextEpochPoint","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"operator","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"rewardLockupEpochs","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"rewardPerShare","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_withdrawLockupEpochs","type":"uint256"},{"internalType":"uint256","name":"_rewardLockupEpochs","type":"uint256"}],"name":"setLockUp","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_operator","type":"address"}],"name":"setOperator","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"share","outputs":[{"internalType":"contract IERC20","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"stake","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"tomb","outputs":[{"internalType":"contract IERC20","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"treasury","outputs":[{"internalType":"contract ITreasury","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"withdraw","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"withdrawLockupEpochs","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
 	},
 	"TombFtmRewardPool": {
 	  "address": "0x488658942104F6743826276387045FE659aB7Db8",
@@ -7711,8 +7163,8 @@
 		}
 	  ]
 	},
-	"HermesAvaxLPHShareRewardPool": {
-	  "address": "0xDDd0A62D8e5AFeccFB334e49D27a57713DD0fBcc",
+	"TombAvaxLPHShareRewardPool": {
+	  "address": "0xb7d3dc568F7dF54d516D37739912Fc2E541Ba2fF",
 	  "abi":  [
 			  {
 				  "inputs": [
@@ -9152,7 +8604,7 @@
 	},
 	"TaxOffice": {
 	  "address": "0x296BA9D2d4A58719a80d2E8D16356ECDBBEDAbEd",
-	  "abi": [{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOperator","type":"address"},{"indexed":true,"internalType":"address","name":"newOperator","type":"address"}],"name":"OperatorTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"inputs":[{"internalType":"uint256","name":"amtHermes","type":"uint256"},{"internalType":"uint256","name":"amtHermesMin","type":"uint256"},{"internalType":"uint256","name":"amtEthMin","type":"uint256"}],"name":"addLiquidityETHTaxFree","outputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"address","name":"token","type":"address"},{"internalType":"uint256","name":"amtHermes","type":"uint256"},{"internalType":"uint256","name":"amtToken","type":"uint256"},{"internalType":"uint256","name":"amtHermesMin","type":"uint256"},{"internalType":"uint256","name":"amtTokenMin","type":"uint256"}],"name":"addLiquidityTaxFree","outputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"disableAutoCalculateTax","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"enableAutoCalculateTax","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_address","type":"address"}],"name":"excludeAddressFromTax","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"hermes","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_address","type":"address"}],"name":"includeAddressInTax","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"isOperator","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"operator","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_burnThreshold","type":"uint256"}],"name":"setBurnThreshold","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_taxCollectorAddress","type":"address"}],"name":"setTaxCollectorAddress","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_address","type":"address"},{"internalType":"bool","name":"_excluded","type":"bool"}],"name":"setTaxExclusionForAddress","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_taxRate","type":"uint256"}],"name":"setTaxRate","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint8","name":"_index","type":"uint8"},{"internalType":"uint256","name":"_value","type":"uint256"}],"name":"setTaxTiersRate","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint8","name":"_index","type":"uint8"},{"internalType":"uint256","name":"_value","type":"uint256"}],"name":"setTaxTiersTwap","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_hermesOracle","type":"address"}],"name":"setTaxableHermesOracle","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"taxExclusionEnabled","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_sender","type":"address"},{"internalType":"address","name":"_recipient","type":"address"},{"internalType":"uint256","name":"_amt","type":"uint256"}],"name":"taxFreeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"taxRate","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOperator_","type":"address"}],"name":"transferOperator","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_newTaxOffice","type":"address"}],"name":"transferTaxOffice","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"uniRouter","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"weth","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"}]
+	  "abi": [{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOperator","type":"address"},{"indexed":true,"internalType":"address","name":"newOperator","type":"address"}],"name":"OperatorTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"inputs":[{"internalType":"uint256","name":"amtTomb","type":"uint256"},{"internalType":"uint256","name":"amtTombMin","type":"uint256"},{"internalType":"uint256","name":"amtEthMin","type":"uint256"}],"name":"addLiquidityETHTaxFree","outputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"address","name":"token","type":"address"},{"internalType":"uint256","name":"amtTomb","type":"uint256"},{"internalType":"uint256","name":"amtToken","type":"uint256"},{"internalType":"uint256","name":"amtTombMin","type":"uint256"},{"internalType":"uint256","name":"amtTokenMin","type":"uint256"}],"name":"addLiquidityTaxFree","outputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"disableAutoCalculateTax","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"enableAutoCalculateTax","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_address","type":"address"}],"name":"excludeAddressFromTax","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"tomb","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_address","type":"address"}],"name":"includeAddressInTax","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"isOperator","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"operator","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_burnThreshold","type":"uint256"}],"name":"setBurnThreshold","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_taxCollectorAddress","type":"address"}],"name":"setTaxCollectorAddress","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_address","type":"address"},{"internalType":"bool","name":"_excluded","type":"bool"}],"name":"setTaxExclusionForAddress","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_taxRate","type":"uint256"}],"name":"setTaxRate","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint8","name":"_index","type":"uint8"},{"internalType":"uint256","name":"_value","type":"uint256"}],"name":"setTaxTiersRate","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint8","name":"_index","type":"uint8"},{"internalType":"uint256","name":"_value","type":"uint256"}],"name":"setTaxTiersTwap","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_tombOracle","type":"address"}],"name":"setTaxableTombOracle","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"taxExclusionEnabled","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_sender","type":"address"},{"internalType":"address","name":"_recipient","type":"address"},{"internalType":"uint256","name":"_amt","type":"uint256"}],"name":"taxFreeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"taxRate","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOperator_","type":"address"}],"name":"transferOperator","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_newTaxOffice","type":"address"}],"name":"transferTaxOffice","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"uniRouter","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"weth","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"}]
 	},
 	"SpookyRouter": {
 	  "address": "0xE54Ca86531e17Ef3616d22Ca28b0D458b6C89106",

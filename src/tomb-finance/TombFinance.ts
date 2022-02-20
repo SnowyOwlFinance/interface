@@ -1,6 +1,6 @@
 // import { Fetcher, Route, Token } from '@uniswap/sdk';
-import { Fetcher as FetcherSpirit, Token as TokenSpirit } from '@pangolindex/sdk';
-import { Fetcher, Route, Token } from '@pangolindex/sdk';
+import { Fetcher as FetcherSpirit, Token as TokenSpirit } from '@traderjoe-xyz/sdk';
+import { Fetcher, Route, Token } from '@traderjoe-xyz/sdk';
 import { Configuration } from './config';
 import { ContractName, TokenStat, AllocationTime, LPStat, Bank, PoolStats, TShareSwapperStat } from './types';
 import { BigNumber, Contract, ethers, EventFilter } from 'ethers';
@@ -78,7 +78,7 @@ export class TombFinance {
     this.fetchMasonryVersionOfUser()
       .then((version) => (this.masonryVersionOfUser = version))
       .catch((err) => {
-        console.error(`Failed to fetch Olympus version: ${err.stack}`);
+        console.error(`Failed to fetch boardroom version: ${err.stack}`);
         this.masonryVersionOfUser = 'latest';
       });
   }
@@ -177,12 +177,12 @@ export class TombFinance {
    * CirculatingSupply (always equal to total supply for bonds)
    */
   async getShareStat(): Promise<TokenStat> {
-    const { HermesAvaxLPHShareRewardPool } = this.contracts;
+    const { TombAvaxLPHShareRewardPool } = this.contracts;
 
     const supply = await this.TSHARE.totalSupply();
 
-    const priceInFTM = await this.getTokenPriceFromPancakeswap(this.TSHARE);
-    const tombRewardPoolSupply = await this.TSHARE.balanceOf(HermesAvaxLPHShareRewardPool.address);
+    const priceInFTM = "0.5"//await this.getTokenPriceFromPancakeswap(this.TSHARE);
+    const tombRewardPoolSupply = await this.TSHARE.balanceOf(TombAvaxLPHShareRewardPool.address);
     const tShareCirculatingSupply = supply.sub(tombRewardPoolSupply);
     const priceOfOneFTM = await this.getWFTMPriceFromPancakeswap();
     const priceOfSharesInDollars = (Number(priceInFTM) * Number(priceOfOneFTM)).toFixed(2);
@@ -212,12 +212,12 @@ export class TombFinance {
 
   async getTombPriceInLastTWAP(): Promise<BigNumber> {
     const { Treasury } = this.contracts;
-    return Treasury.getHermesUpdatedPrice();
+    return Treasury.getTombUpdatedPrice();
   }
 
   async getBondsPurchasable(): Promise<BigNumber> {
     const { Treasury } = this.contracts;
-    return Treasury.getBurnableHermesLeft();
+    return Treasury.getBurnableTombLeft();
   }
 
   /**
@@ -232,7 +232,7 @@ export class TombFinance {
     const depositTokenPrice = await this.getDepositTokenPriceInDollars(bank.depositTokenName, depositToken);
     const stakeInPool = await depositToken.balanceOf(bank.address);
     const TVL = Number(depositTokenPrice) * Number(getDisplayBalance(stakeInPool, depositToken.decimal));
-    const stat = bank.earnTokenName === 'HERMES' ? await this.getTombStat() : await this.getShareStat();
+    const stat = bank.earnTokenName === 'TOMB' ? await this.getTombStat() : await this.getShareStat();
     const tokenPerSecond = await this.getTokenPerSecond(
       bank.earnTokenName,
       bank.contract,
@@ -268,9 +268,9 @@ export class TombFinance {
     poolContract: Contract,
     depositTokenName: string,
   ) {
-    if (earnTokenName === 'HERMES') {
-      if (!contractName.endsWith('HermesRewardPool')) {
-        const rewardPerSecond = await poolContract.hermesPerSecond();
+    if (earnTokenName === 'TOMB') {
+      if (!contractName.endsWith('TombRewardPool')) {
+        const rewardPerSecond = await poolContract.tombPerSecond();
         if (depositTokenName === 'WAVAX') {
           return rewardPerSecond.mul(6000).div(11000).div(24);
         } else if (depositTokenName === 'BOO') {
@@ -286,12 +286,12 @@ export class TombFinance {
       const startDateTime = new Date(poolStartTime.toNumber() * 1000);
       const FOUR_DAYS = 4 * 24 * 60 * 60 * 1000;
       if (Date.now() - startDateTime.getTime() > FOUR_DAYS) {
-        return await poolContract.epochHermesPerSecond(1);
+        return await poolContract.epochTombPerSecond(1);
       }
-      return await poolContract.epocHermesPerSecond(0);
+      return await poolContract.epocTombPerSecond(0);
     }
     const rewardPerSecond = await poolContract.tSharePerSecond();
-    if (depositTokenName.startsWith('HERMES')) {
+    if (depositTokenName.startsWith('TOMB')) {
       return rewardPerSecond.mul(35500).div(59500);
     } else {
       return rewardPerSecond.mul(24000).div(59500);
@@ -309,12 +309,12 @@ export class TombFinance {
   async getDepositTokenPriceInDollars(tokenName: string, token: ERC20) {
     let tokenPrice;
     const priceOfOneFtmInDollars = await this.getWFTMPriceFromPancakeswap();
-    if (tokenName === 'WAVAX') {
+    if (tokenName === 'JOE') {
       tokenPrice = priceOfOneFtmInDollars;
     } else {
       if (tokenName === 'SNO-JOE-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.TOMB, true);
-      } else if (tokenName === 'SNOSHARE-SNO-LP') {
+      } else if (tokenName === 'SNOSHARE-JOE-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.TSHARE, false);
       } else if (tokenName === 'SHIBA') {
         tokenPrice = await this.getTokenPriceFromSpiritswap(token);
@@ -347,7 +347,7 @@ export class TombFinance {
    */
   async buyBonds(amount: string | number): Promise<TransactionResponse> {
     const { Treasury } = this.contracts;
-    const treasuryTombPrice = await Treasury.getHermesPrice();
+    const treasuryTombPrice = await Treasury.getTombPrice();
     return await Treasury.buyBonds(decimalToBalance(amount), treasuryTombPrice);
   }
 
@@ -357,7 +357,7 @@ export class TombFinance {
    */
   async redeemBonds(amount: string): Promise<TransactionResponse> {
     const { Treasury } = this.contracts;
-    const priceForTomb = await Treasury.getHermesPrice();
+    const priceForTomb = await Treasury.getTombPrice();
     return await Treasury.redeemBonds(decimalToBalance(amount), priceForTomb);
   }
 
@@ -408,8 +408,8 @@ export class TombFinance {
   ): Promise<BigNumber> {
     const pool = this.contracts[poolName];
     try {
-      if (earnTokenName === 'HERMES') {
-        return await pool.pendingHermes(poolId, account);
+      if (earnTokenName === 'TOMB') {
+        return await pool.pendingTomb(poolId, account);
       } else {
         return await pool.pendingShare(poolId, account);
       }
@@ -553,7 +553,7 @@ export class TombFinance {
   async getMasonryAPR() {
     const Masonry = this.currentMasonry();
     const latestSnapshotIndex = await Masonry.latestSnapshotIndex();
-    const lastHistory = await Masonry.olympusHistory(latestSnapshotIndex);
+    const lastHistory = await Masonry.masonryHistory(latestSnapshotIndex);
 
     const lastRewardsReceived = lastHistory[1];
 
@@ -604,7 +604,7 @@ export class TombFinance {
 
   async stakeShareToMasonry(amount: string): Promise<TransactionResponse> {
     if (this.isOldMasonryMember()) {
-      throw new Error("you're using old Olympus. please withdraw and deposit the HSHARE again.");
+      throw new Error("you're using old boardroom. please withdraw and deposit the HSHARE again.");
     }
     const Masonry = this.currentMasonry();
     return await Masonry.stake(decimalToBalance(amount));
@@ -612,17 +612,11 @@ export class TombFinance {
 
   async getStakedSharesOnMasonry(): Promise<BigNumber> {
     const Masonry = this.currentMasonry();
-    if (this.masonryVersionOfUser === 'v1') {
-      return await Masonry.getShareOf(this.myAccount);
-    }
     return await Masonry.balanceOf(this.myAccount);
   }
 
   async getEarningsOnMasonry(): Promise<BigNumber> {
     const Masonry = this.currentMasonry();
-    if (this.masonryVersionOfUser === 'v1') {
-      return await Masonry.getCashEarningsOf(this.myAccount);
-    }
     return await Masonry.earned(this.myAccount);
   }
 
@@ -633,9 +627,6 @@ export class TombFinance {
 
   async harvestCashFromMasonry(): Promise<TransactionResponse> {
     const Masonry = this.currentMasonry();
-    if (this.masonryVersionOfUser === 'v1') {
-      return await Masonry.claimDividends();
-    }
     return await Masonry.claimReward();
   }
 
@@ -662,7 +653,7 @@ export class TombFinance {
     const { Masonry, Treasury } = this.contracts;
     const nextEpochTimestamp = await Masonry.nextEpochPoint(); //in unix timestamp
     const currentEpoch = await Masonry.epoch();
-    const mason = await Masonry.members(this.myAccount);
+    const mason = await Masonry.masons(this.myAccount);
     const startTimeEpoch = mason.epochTimerStart;
     const period = await Treasury.PERIOD();
     const periodInHours = period / 60 / 60; // 6 hours, period is displayed in seconds which is 21600
@@ -695,7 +686,7 @@ export class TombFinance {
     const { Masonry, Treasury } = this.contracts;
     const nextEpochTimestamp = await Masonry.nextEpochPoint();
     const currentEpoch = await Masonry.epoch();
-    const mason = await Masonry.members(this.myAccount);
+    const mason = await Masonry.masons(this.myAccount);
     const startTimeEpoch = mason.epochTimerStart;
     const period = await Treasury.PERIOD();
     const PeriodInHours = period / 60 / 60;
@@ -723,7 +714,7 @@ export class TombFinance {
     
       let asset;
       let assetUrl;
-      if (assetName === 'HERMES') {
+      if (assetName === 'TOMB') {
         asset = this.TOMB;
         assetUrl = 'https://gateway.pinata.cloud/ipfs/QmVL6cK5iUmkfGhw41s4gCksHn4H4KoF2tnEin2fhbEMmQ';
       } else if (assetName === 'HSHARE') {
@@ -761,7 +752,7 @@ export class TombFinance {
     const { SpookyRouter } = this.contracts;
     const { _reserve0, _reserve1 } = await this.TOMBWFTM_LP.getReserves();
     let quote;
-    if (tokenName === 'HERMES') {
+    if (tokenName === 'TOMB') {
       quote = await SpookyRouter.quote(parseUnits(tokenAmount), _reserve1, _reserve0);
     } else {
       quote = await SpookyRouter.quote(parseUnits(tokenAmount), _reserve0, _reserve1);

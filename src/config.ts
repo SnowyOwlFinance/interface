@@ -16,9 +16,9 @@ const configurations: { [env: string]: Configuration } = {
       BOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 18],
       ZOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 0],
       SHIBA: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 9],
-      'WAVAX-USDC-LP': ['0xbd918ed441767fe7924e99f6a0e0b568ac1970d9', 18],
-      'SNO-JOE-LP': ['0x5cFdAb5289E8a044b4305E19242F1966ceBeE953', 18],
-      'SNOSHARE-SNO-LP': ['0xcA0bd32f9B1b91421672B4F428721FCb37f08a88', 18],
+      'WAVAX-USDC-LP': ['0x67926d973cD8eE876aD210fAaf7DFfA99E414aCf', 18],
+      'SNO-JOE-LP': ['0xE63b66A8CF7811525cd15daB15F17fb62aa5af2F', 18],
+      'SNOSHARE-JOE-LP': ['0x061349a57b702ebE3139CA419457bb23f7e0D8A2', 18],
     },
     baseLaunchDate: new Date('2021-06-02 13:00:00Z'),
     bondLaunchesAt: new Date('2020-12-03T15:00:00Z'),
@@ -37,9 +37,9 @@ const configurations: { [env: string]: Configuration } = {
       BOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 18],
       ZOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 0],
       SHIBA: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 9],
-      'WAVAX-USDC-LP': ['0xbd918ed441767fe7924e99f6a0e0b568ac1970d9', 18],
-      'SNO-JOE-LP': ['0x5cFdAb5289E8a044b4305E19242F1966ceBeE953', 18],
-      'SNOSHARE-SNO-LP': ['0xcA0bd32f9B1b91421672B4F428721FCb37f08a88', 18],
+      'WAVAX-USDC-LP': ['0x67926d973cD8eE876aD210fAaf7DFfA99E414aCf', 18],
+      'SNO-JOE-LP': ['0xE63b66A8CF7811525cd15daB15F17fb62aa5af2F', 18],
+      'SNOSHARE-JOE-LP': ['0x061349a57b702ebE3139CA419457bb23f7e0D8A2', 18],
     },
     baseLaunchDate: new Date('2021-06-02 13:00:00Z'),
     bondLaunchesAt: new Date('2020-12-03T15:00:00Z'),
@@ -63,39 +63,28 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   finished: will disable the pool on the UI if set to true
   sort: the order of the pool
   */
- SnoJoeLPGenesisRewardPool: {
-  name: 'Earn SNO by SNO-JOE LP',
+ SnoJoeLPSnoShareRewardPool: {
+  name: 'Earn SNOSHARE by SNO-JOE LP',
   poolId: 0,
   sectionInUI: 2,
-  contract: 'SnoJoeLPGenesisRewardPool',
+  contract: 'TombAvaxLPHShareRewardPool',
   depositTokenName: 'SNO-JOE-LP',
-  earnTokenName: 'SNO',
+  earnTokenName: 'SNOSHARE',
   finished: false,
-  sort: 0,
+  sort: 6,
   closedForStaking: false
  },
-  /*HermesAvaxLPHShareRewardPool: {
-    name: 'Earn HSHARE by HERMES-AVAX LP',
-    poolId: 0,
-    sectionInUI: 2,
-    contract: 'HermesAvaxLPHShareRewardPool',
-    depositTokenName: 'SNO-JOE-LP',
-    earnTokenName: 'HSHARE',
-    finished: false,
-    sort: 6,
-    closedForStaking: false,
-  },
-  HshareAvaxLPHShareRewardPool: {
-    name: 'Earn HSHARE by HSHARE-AVAX LP',
-    poolId: 1,
-    sectionInUI: 2,
-    contract: 'HshareAvaxLPHShareRewardPool',
-    depositTokenName: 'SNOSHARE-SNO-LP',
-    earnTokenName: 'HSHARE',
-    finished: false,
-    sort: 7,
-    closedForStaking: false,
-  },*/
+ SnoShareJoeLPSnoShareRewardPool: {
+  name: 'Earn SNOSHARE by SNOSHARE-JOE LP',
+  poolId: 1,
+  sectionInUI: 2,
+  contract: 'TombAvaxLPHShareRewardPool',
+  depositTokenName: 'SNOSHARE-JOE-LP',
+  earnTokenName: 'SNOSHARE',
+  finished: false,
+  sort: 7,
+  closedForStaking: false
+ },
 };
 
 export default configurations[process.env.NODE_ENV || 'development'];

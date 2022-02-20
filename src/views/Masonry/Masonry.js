@@ -118,7 +118,7 @@ const Masonry = () => {
             <Grid container justify="center">
               <Box mt={3} style={{ width: '600px' }}>
                 <Alert variant="filled" severity="info">
-                  Staked HSHAREs can only be withdrawn after 6 epochs since deposit.
+                  Staked SNOSHAREs can only be withdrawn after 3 epochs since deposit.
                 </Alert>
               </Box>
             </Grid>

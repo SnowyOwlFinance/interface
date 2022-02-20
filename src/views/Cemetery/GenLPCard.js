@@ -8,7 +8,7 @@ import useLpStats from '../../hooks/useLpStats';
 
 const GenLPCard = () => {
   const tombFtmLpStats = useLpStats('SNO-JOE-LP');
-  const tShareFtmLpStats = useLpStats('SNOSHARE-SNO-LP');
+  const tShareFtmLpStats = useLpStats('SNOSHARE-JOE-LP');
   const tombLPStats = useMemo(() => (tombFtmLpStats ? tombFtmLpStats : null), [tombFtmLpStats]);
   const tshareLPStats = useMemo(() => (tShareFtmLpStats ? tShareFtmLpStats : null), [tShareFtmLpStats]);
   return (
@@ -28,8 +28,8 @@ const GenLPCard = () => {
         </Box>
         <Box mt={2}>
           <span style={{ fontSize: '26px' }}>
-            {tombLPStats?.tokenAmount ? tombLPStats?.tokenAmount : '-.--'} HERMES /{' '}
-            {tombLPStats?.ftmAmount ? tombLPStats?.ftmAmount : '-.--'} AVAX
+            {tombLPStats?.tokenAmount ? tombLPStats?.tokenAmount : '-.--'} SNO /{' '}
+            {tombLPStats?.ftmAmount ? tombLPStats?.ftmAmount : '-.--'} JOE
           </span>
         </Box>
         <Box>${tombLPStats?.priceOfOne ? tombLPStats.priceOfOne : '-.--'}</Box>
@@ -39,7 +39,7 @@ const GenLPCard = () => {
         </span>
       </CardContent>
       <CardActions style={{ justifyContent: 'center' }}>
-          <Button color="primary" size='small' style={{ width: '400px'}} variant="contained" component={Link} to={`/crete/HermesAvaxLPHShareRewardPool/`}>
+          <Button color="primary" size='small' style={{ width: '400px'}} variant="contained" component={Link} to={`/farms/SnoJoeLPSnoShareRewardPool/`}>
             View
           </Button>
         </CardActions>

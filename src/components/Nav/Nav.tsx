@@ -29,7 +29,7 @@ import logohshare2 from '../../assets/img/logo_hshare2.png';
 import useTombStats from '../../hooks/useTombStats';
 import usetShareStats from '../../hooks/usetShareStats';
 
-const logo = require('../../assets/img/logo_hermes3.png');
+const logo = require('../../assets/img/sno.png');
 const useStyles = makeStyles((theme) => ({
   '@global': {
     ul: {
@@ -37,6 +37,14 @@ const useStyles = makeStyles((theme) => ({
       padding: 0,
       listStyle: 'none',
     },
+  },
+  logo: {
+    width: "75px",
+    marginRight: "20px"
+  },
+  label: {
+    fontSize: "22px",
+    marginRight: "50px"
   },
   appBar: {
     color: '#e0e3bd',
@@ -59,14 +67,14 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'nowrap',
   },
   toolbarTitle: {
-    fontFamily: '"Roboto", cursive',
+    fontFamily: '"Quicksand", cursive',
     fontSize: '30px',
   },
   link: {
-    fontFamily: '"Roboto", cursive',
+    fontFamily: '"Quicksand", cursive',
     color: '#161D29',
     fontSize: '18px',
-    margin: '14%',
+    margin: '6%',
     textDecoration: 'none',
     '&:hover': {
       textDecoration: 'none',
@@ -79,6 +87,20 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: 'none',
     },
   },
+  "@media only screen and (max-width: 1400px)": {
+    logo: {
+      width: "60px",
+      marginRight: "12px"
+    },
+    label: {
+      fontSize: "18px",
+      marginRight: "30px"
+    },
+    link: {
+      fontSize: "17px",
+      margin: "3.5%"
+    }
+  }
 }));
 
 
@@ -108,40 +130,45 @@ const Nav = () => {
 
   return (
     <AppBar position="static" elevation={0} className={classes.appBar}>
-      <Toolbar className={classes.toolbar}>
+      <Toolbar className={classes.toolbar} style={{ width: "100%" }}>
         {matches ? (
           <>
             <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
             
               <Link to="/" color="inherit" className={classes.brandLink}>
-              <img alt='logo' style={{ width: 350 }} src={String(logo)} />
+                <div className={classes.label} style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
+                  <img alt='logo' className={classes.logo} src={String(logo)} />
+                  Snowy Owl
+                  </div>
               </Link>
             </Typography>
-            <Box style={{ marginRight:'38%'}}>
+            <Box style={{ width: "auto !important" }}>
               <Link color="textPrimary" to="/" className={classes.link}>
                 Home
               </Link>
-              <Link color="textPrimary" to="/crete" className={classes.link}>
+              <Link color="textPrimary" to="/farms" className={classes.link}>
                 Farms
               </Link>
-              <Link color="textPrimary" to="/olympus" className={classes.link}>
+              <Link color="textPrimary" to="/boardroom" className={classes.link}>
                 Boardroom
               </Link>
-              <Link color="textPrimary" to="/tartarus" className={classes.link}>
+              <Link color="textPrimary" to="/bonds" className={classes.link}>
                 Bonds
               </Link>
-              <a href="https://docs.hermesfinance.app" className={classes.link}>
+              <a href="https://docs.tomb.finance" className={classes.link}>
                 Docs
               </a>
             </Box>
+            <div style={{ width: "auto", marginLeft: "auto", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", marginRight: "20px" }}>
               <img alt='logo4' style={{ width: 50 }} src={String(logo4)} />
               <span style={{ fontSize: '16px', color:'#000000', marginRight: '15px', marginLeft: '10px' }}>${tombPriceInDollars ? tombPriceInDollars	 : '-.--'}</span>
               <img alt='logoshare' style={{ width: 50 }} src={String(logohshare2)} />
               <span style={{ fontSize: '16px', color:'#000000', marginRight: '30px', marginLeft: '10px' }}>${tSharePriceInDollars ? tSharePriceInDollars	 : '-.--'}</span>
-            <Button href="https://discord.gg/KbHU9hrayQ" variant="contained" color='secondary' style={{ marginRight: '25px', borderRadius: '14px', width: '60px' }}>
+            <Button href="https://discord.gg/vYWDJjwfvE" target="_blank" variant="contained" color='secondary' style={{ marginRight: '25px', borderRadius: '14px', width: '60px' }}>
             <img alt='discordlogo' style={{ width: 22 }} src={String(DiscordImage)} />
               </Button>
             <AccountButton text="Connect"/>
+            </div>
           </>
         ) : (
           <>
@@ -155,7 +182,7 @@ const Nav = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
-              Hermes Finance
+              Snowy Owl Finance
             </Typography>
 
             <Drawer
@@ -176,11 +203,11 @@ const Nav = () => {
               </div>
               <Divider />
               <List>
-                <ListItemLink primary="Home" to="/" />
-                <ListItemLink primary="Crete" to="/crete" />
-                <ListItemLink primary="Olympus" to="/olympus" />
-                <ListItemLink primary="Tartarus" to="/tartarus" />
-                <ListItem button component="a" href="https://docs.hermesfinance.app">
+                <ListItemLink primary="Home" to="/"/>
+                <ListItemLink primary="Farms" to="/farms" />
+                <ListItemLink primary="Boardroom" to="/boardroom" />
+                <ListItemLink primary="Bonds" to="/bonds" />
+                <ListItem button component="a" href="https://docs.tombfinance.app">
                   <ListItemText>Docs</ListItemText>
                 </ListItem>
                 <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

@@ -50,16 +50,16 @@ const Cemetery = () => {
                 </div> */}
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 2).length === 0}>
                   <Typography color="primary.dark" align='center' variant="h4" gutterBottom style={{ marginBottom: '3%' }}>
-                    Genesis Pools
+                    SNOSHARE Pools
                   </Typography>
                   <Grid container spacing={3}>
-                    <GenLPCard />
+                    <CemeteryCard />
                   </Grid>
                 </div>
 {/* 
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 1).length === 0}>
                   <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
-                    Earn HERMES by staking LP
+                    Earn TOMB by staking LP
                   </Typography>
                   <Alert variant="filled" severity="warning">
                     All below pools have ended. Please unstake and collect your rewards.
