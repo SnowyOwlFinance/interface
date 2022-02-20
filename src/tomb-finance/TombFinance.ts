@@ -181,7 +181,7 @@ export class TombFinance {
 
     const supply = await this.TSHARE.totalSupply();
 
-    const priceInFTM = "0.5"//await this.getTokenPriceFromPancakeswap(this.TSHARE);
+    const priceInFTM = await this.getTokenPriceFromPancakeswap(this.TSHARE);
     const tombRewardPoolSupply = await this.TSHARE.balanceOf(TombAvaxLPHShareRewardPool.address);
     const tShareCirculatingSupply = supply.sub(tombRewardPoolSupply);
     const priceOfOneFTM = await this.getWFTMPriceFromPancakeswap();

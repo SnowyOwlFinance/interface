@@ -407,7 +407,7 @@ const Home = () => {
         <Grid item xs={12} sm={6}>
           <Card>
             <CardContent align="center">
-              <h2>SNOSHARE-wAVAX LP</h2>
+              <h2>SNOSHARE-JOE LP</h2>
               <Box mt={2}>
                   <TokenSymbol symbol="SNOSHARE-JOE-LP" />
               </Box>
