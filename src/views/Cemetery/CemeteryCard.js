@@ -37,9 +37,12 @@ const CemeteryCard = () => {
         </span>
       </CardContent>
       <CardActions style={{ justifyContent: 'center' }}>
-          <Button color="primary" size='large' style={{ width: '275px', height: "45px", marginBottom: '5%' }} variant="contained" component={Link} to={`/farms/SnoJoeLPSnoShareRewardPool/`}>
+          <Button color="primary" size='large' style={{ width: '200px', height: "45px", marginBottom: '5%' }} variant="contained" component={Link} to={`/farms/SnoJoeLPSnoShareRewardPool/`}>
             Farm
           </Button>
+          <Button color="primary" size='large' style={{ width: '200px', height: "45px", marginBottom: '5%' }} variant="contained" to="https://traderjoexyz.com/pool/0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D/0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd">
+              Add Liquidity
+            </Button>
         </CardActions>
     </Card>
     </Grid>
@@ -68,8 +71,11 @@ const CemeteryCard = () => {
               </span>
         </CardContent>
         <CardActions style={{ justifyContent: 'center' }}>
-            <Button color="primary" size='large' style={{ width: '275px', height: "45px", marginBottom: '5%' }} variant="contained" component={Link} to={`/farms/SnoShareJoeLPSnoShareRewardPool/`}>
+            <Button color="primary" size='large' style={{ width: '200px', height: "45px", marginBottom: '5%' }} variant="contained" component={Link} to={`/farms/SnoShareJoeLPSnoShareRewardPool/`}>
               Farm
+            </Button>
+            <Button color="primary" target="_blank" size='large' style={{ width: '200px', height: "45px", marginBottom: '5%' }} variant="contained" >
+              Add Liquidity
             </Button>
           </CardActions>
       </Card>

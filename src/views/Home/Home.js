@@ -44,6 +44,31 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '10px',
     },
   },
+  tokenButton: {},
+  "@media only screen and (max-width: 1200px)": {
+    tokenButton: {
+      fontSize: "12px",
+      marginRight: "4%"
+    }
+  },
+  flex: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flexStart",
+    alignItems: "center",
+    flexWrap: "wrap"
+  },
+  "@media only screen and (max-width: 850px)": {
+    tokenButton: {
+      width: "40% !important"
+    },
+  },
+  "@media only screen and (max-width: 670px)": {
+    tokenButton: {
+      width: "80% !important"
+    },
+  },
 }));
 
 const Home = () => {
@@ -173,15 +198,37 @@ const Home = () => {
                   <StyledBalance>
                       <StyledValue>{displayTombBalance}</StyledValue>
                       <Label text=" SNO available" />
-                      <span style={{ fontSize: '15px', marginLeft:'2%'}}> (${tombBalanceinDollars ? tombBalanceinDollars : '-.----'})</span>
+                      <span style={{ fontSize: '15px', marginLeft:'2%'}}> (${tombBalanceinDollars ? tombBalanceinDollars : '-.----'})&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                      <div className={classes.flex}>
+                      <Button color="primary" target="_blank" href={buyTombAddress} variant="contained" style={{ marginTop: '10px', borderRadius:'10px', width: '27%', marginRight: '5%'}} className={classes.tokenButton}>
+                        Buy
+                      </Button>
+                      <Button color="primary" target="_blank" href="https://dexscreener.com/avalanche/0xe63b66a8cf7811525cd15dab15f17fb62aa5af2f" variant="contained" style={{ marginTop: '10px', borderRadius:'10px', width: '27%', marginRight: '5%'}} className={classes.tokenButton}>
+                        Chart
+                      </Button>
+                      <Button color="primary" target="_blank" href="https://snowtrace.io/address/0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D#code" variant="contained" style={{ marginTop: '10px', borderRadius:'10px', width: '27%', marginRight: '5%'}} className={classes.tokenButton}>
+                        Contract
+                      </Button>
+                      </div>
                   </StyledBalance>                  
                 </StyledBalanceWrapper>
                 <StyledBalanceWrapper>
                   <TokenSymbol symbol="HSHARE" />
                   <StyledBalance>
                     <StyledValue>{displayTshareBalance}</StyledValue>
-                    <Label text=" SNOSHARE available" />
+                    <Label text=" SNOSHARE available                             " />
                     <span style={{ fontSize: '15px', marginLeft:'2%' }}> (${tshareBalanceinDollars ? tshareBalanceinDollars : '-.----'})</span>
+                    <div className={classes.flex}>
+                    <Button color="primary" target="_blank" href={buyTShareAddress} variant="contained" style={{ marginTop: '10px', borderRadius:'10px', width: '27%', marginRight: '5%'}} className={classes.tokenButton}>
+                        Buy
+                      </Button>
+                      <Button color="primary" target="_blank" href="https://dexscreener.com/avalanche/0x061349a57b702ebe3139ca419457bb23f7e0d8a2" variant="contained" style={{ marginTop: '10px', borderRadius:'10px', width: '27%', marginRight: '5%'}} className={classes.tokenButton}>
+                        Chart
+                      </Button>
+                      <Button color="primary" target="_blank" href="https://snowtrace.io/address/0xe7a102fbc8ab3581d62830ddb599eccaae5e7875#code" variant="contained" style={{ marginTop: '10px', borderRadius:'10px', width: '27%', marginRight: '5%'}} className={classes.tokenButton}>
+                        Contract
+                      </Button>
+                      </div>
                   </StyledBalance>
                 </StyledBalanceWrapper>
                 <StyledBalanceWrapper>
@@ -190,6 +237,14 @@ const Home = () => {
                       <StyledValue>{displayTbondBalance}</StyledValue>
                       <Label text=" SNOBOND available" />
                       <span style={{ fontSize: '15px', marginLeft:'2%' }}> (${tbondBalanceinDollars ? tbondBalanceinDollars : '-.----'})</span>
+                      <div className={classes.flex}>
+                      <Button color="primary" href="/bonds" variant="contained" style={{ marginTop: '10px', borderRadius:'10px', width: '27%', marginRight: '5%'}} className={classes.tokenButton}>
+                        Bond
+                      </Button>
+                      <Button color="primary" target="_blank" href="https://snowtrace.io/address/0x8aB4Ac266d8e698b7E39f97Ec17876076680f6f1#code" variant="contained" style={{ marginTop: '10px', borderRadius:'10px', width: '27%', marginRight: '5%'}} className={classes.tokenButton}>
+                        Contract
+                      </Button>
+                      </div>
                   </StyledBalance>
                </StyledBalanceWrapper>
               </Balances>

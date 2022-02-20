@@ -2,6 +2,10 @@
   --font: "Quicksand";
 }
 
+body {
+  overflow-x: hidden !important;
+}
+
 body,
 html,
 h1 {

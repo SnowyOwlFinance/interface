@@ -124,8 +124,8 @@ export class TombFinance {
     const lpToken = this.externalTokens[name];
     const lpTokenSupplyBN = await lpToken.totalSupply();
     const lpTokenSupply = getDisplayBalance(lpTokenSupplyBN, 18);
-    const token0 = name.startsWith('SNO') ? this.TOMB : this.TSHARE;
-    const isTomb = name.startsWith('SNO');
+    const token0 = name.startsWith("SNO-") ? this.TOMB : this.TSHARE;
+    const isTomb = name.startsWith("SNO-");
     const tokenAmountBN = await token0.balanceOf(lpToken.address);
     const tokenAmount = getDisplayBalance(tokenAmountBN, 18);
 
@@ -136,6 +136,7 @@ export class TombFinance {
     const lpTokenPrice = await this.getLPTokenPrice(lpToken, token0, isTomb);
     const lpTokenPriceFixed = Number(lpTokenPrice).toFixed(2).toString();
     const liquidity = (Number(lpTokenSupply) * Number(lpTokenPrice)).toFixed(2).toString();
+
     return {
       tokenAmount: tokenAmountInOneLP.toFixed(2).toString(),
       ftmAmount: ftmAmountInOneLP.toFixed(2).toString(),
@@ -292,9 +293,9 @@ export class TombFinance {
     }
     const rewardPerSecond = await poolContract.tSharePerSecond();
     if (depositTokenName.startsWith('TOMB')) {
-      return rewardPerSecond.mul(35500).div(60000).mul(5);
+      return rewardPerSecond.mul(35500).div(60000).mul(3).div(2);
     } else {
-      return rewardPerSecond.mul(24000).div(60000).mul(5);
+      return rewardPerSecond.mul(24000).div(60000).mul(3).div(2);
     }
   }
 
