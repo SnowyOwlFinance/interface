@@ -155,6 +155,9 @@ const Nav = () => {
               <Link color="textPrimary" to="/bonds" className={classes.link}>
                 Bonds
               </Link>
+              <Link color="textPrimary" to="/rebates" className={classes.link}>
+                Rebates
+              </Link>
               <a href="https://snowyowlfinance.gitbook.io/" className={classes.link}>
                 Docs
               </a>

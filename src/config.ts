@@ -85,6 +85,28 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   sort: 7,
   closedForStaking: false
  },
+ SnoJoeLPRebate: {
+  name: 'Bond SNO-JOE LP for SNO',
+  poolId: 0,
+  sectionInUI: 3,
+  contract: 'TombAvaxLPHShareRewardPool',
+  depositTokenName: 'SNO-JOE-LP',
+  earnTokenName: 'SNO',
+  finished: false,
+  sort: 6,
+  closedForStaking: false
+ },
+ SnoShareJoeLPRebate: {
+  name: 'Bond SNOSHARE-JOE LP for SNO',
+  poolId: 0,
+  sectionInUI: 3,
+  contract: 'TombAvaxLPHShareRewardPool',
+  depositTokenName: 'SNOSHARE-JOE-LP',
+  earnTokenName: 'SNO',
+  finished: false,
+  sort: 6,
+  closedForStaking: false
+ }
 };
 
 export default configurations[process.env.NODE_ENV || 'development'];

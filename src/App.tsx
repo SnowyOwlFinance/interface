@@ -23,6 +23,7 @@ const Masonry = lazy(() => import('./views/Masonry'));
 const Pit = lazy(() => import('./views/Pit'));
 // const SBS = lazy(() => import('./views/Sbs'));
 // const Liquidity = lazy(() => import('./views/Liquidity'));
+const Rebates = lazy(() => import('./views/Rebates'))
 
 const NoMatch = () => (
   <h3 style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
@@ -56,6 +57,9 @@ const App: React.FC = () => {
             </Route>
             <Route path="/bonds">
               <Pit />
+            </Route>
+            <Route path="/rebates">
+              <Rebates />
             </Route>
            {/* <Route path="/sbs">
               <SBS />

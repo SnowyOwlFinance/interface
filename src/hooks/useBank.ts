@@ -4,10 +4,11 @@ import { Bank, ContractName } from '../tomb-finance';
 
 const useBank = (contractName: ContractName): Bank => {
   const { banks } = useContext(BanksContext);
+  console.log(banks)
   if (contractName === "SnoShareJoeLPSnoShareRewardPool") {
-    return banks[1]
+    return banks[banks.length - 1]
   } else {
-    return banks[0]
+    return banks[banks.length - 2]
   }
 };
 

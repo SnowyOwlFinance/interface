@@ -17,6 +17,7 @@ import TokenSymbol from '../../components/TokenSymbol';
 import useTombStats from '../../hooks/useTombStats';
 import useLpStats from '../../hooks/useLpStats';
 import useModal from '../../hooks/useModal';
+import useFantomPrice from '../../hooks/useFantomPrice.js';
 import useBondStats from '../../hooks/useBondStats';
 import usetShareStats from '../../hooks/usetShareStats';
 import useTotalValueLocked from '../../hooks/useTotalValueLocked';
@@ -80,6 +81,7 @@ const Home = () => {
   const tShareStats = usetShareStats();
   const tBondStats = useBondStats();
   const tombFinance = useTombFinance();
+  const { price: JOEPrice, marketCap: JOEMarketCap, priceChange: JOEPriceChange } = useFantomPrice();
 
   let tomb;
   let tShare;
@@ -309,7 +311,51 @@ const Home = () => {
        </Grid> */}
 
         {/* TOMB */}
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={3}>
+          <Card>
+            <CardContent style={{ position: 'relative' }}>
+               <Box align='center' mt={2}>
+                  <TokenSymbol symbol="WFTM" />
+              </Box>
+              <h2 align='center'>JOE</h2>
+              <p align='center'>Current Price</p>
+              <Box align='center'>
+                <span style={{ fontSize: '30px' }}>${JOEPrice ? JOEPrice : '-.----'}</span>
+              </Box>
+              <Box align='center' marginBottom={3}>
+              &nbsp;
+                {/* <span style={{ fontSize: '16px', alignContent: 'flex-start' }}>
+                  ${tombPriceInDollars ? tombPriceInDollars : '-.--'}
+                </span> */}
+              </Box>
+              <Row>
+              <span style={{ fontSize: '14px' }}>
+                Market Cap:<br />
+                24h Price Change:  <br />
+                &nbsp;
+              </span>
+              <span style={{ fontSize: '14px' }}>
+                ${JOEMarketCap} <br />
+                {JOEPriceChange.toFixed(2)}% <br />
+                &nbsp;
+              </span>
+              </Row>
+              <Box>
+              <Button
+                color="primary"
+                target="_blank"
+                href={buyTombAddress}
+                variant="contained"
+                style={{ marginTop: '10px', borderRadius:'10px', width: '100%'}}
+                className={classes.button}
+              >
+                Purchase
+              </Button>
+              </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={3}>
           <Card>
             <CardContent style={{ position: 'relative' }}>
                <Box align='center' mt={2}>
@@ -354,7 +400,7 @@ const Home = () => {
         </Grid>
 
         {/* TSHARE */}
-        <Grid  item xs={12} sm={4}>
+        <Grid  item xs={12} sm={3}>
           <Card>
             <CardContent style={{ position: 'relative' }}>
                <Box align='center' mt={2}>
@@ -397,7 +443,7 @@ const Home = () => {
         </Grid>
 
         {/* TBOND */}
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={3}>
           <Card>
             <CardContent style={{ position: 'relative' }}>
               <Box  align="center" mt={2}>
