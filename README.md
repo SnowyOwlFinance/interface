@@ -32,7 +32,7 @@ npx prettier --write .
 
 ## Useful Resources
 
-- [Our project documentation](https://docs.tomb.finance/) will help you understand before start contributing
+- [Our project documentation](https://snowyowlfinance.gitbook.io/) will help you understand before start contributing
 - Join our [Discord](https://discord.gg/tombfinance) community
 - Or if you are more of a [Telegram Zombie](https://discord.gg/tombfinance) we have that too
 - Bugs? Use the [Issues](https://github.com/tombfinance/tombfinance-frontend/issues) section of our github to report them

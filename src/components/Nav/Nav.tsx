@@ -155,7 +155,7 @@ const Nav = () => {
               <Link color="textPrimary" to="/bonds" className={classes.link}>
                 Bonds
               </Link>
-              <a href="https://docs.tomb.finance" className={classes.link}>
+              <a href="https://snowyowlfinance.gitbook.io/" className={classes.link}>
                 Docs
               </a>
             </Box>
@@ -207,7 +207,7 @@ const Nav = () => {
                 <ListItemLink primary="Farms" to="/farms" />
                 <ListItemLink primary="Boardroom" to="/boardroom" />
                 <ListItemLink primary="Bonds" to="/bonds" />
-                <ListItem button component="a" href="https://docs.tombfinance.app">
+                <ListItem button component="a" href="https://snowyowlfinance.gitbook.io/">
                   <ListItemText>Docs</ListItemText>
                 </ListItem>
                 <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
