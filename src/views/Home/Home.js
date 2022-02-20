@@ -377,7 +377,7 @@ const Home = () => {
                 style={{ marginTop: '10px', borderRadius:'10px', width: '100%'}}
                 className={classes.button}
               >
-                Purchase or Redeem
+                Bond
               </Button>
               </Box>
             </CardContent>
@@ -414,7 +414,7 @@ const Home = () => {
               <Box mt={2}>
                 <span style={{ fontSize: '26px' }}>
                   {tshareLPStats?.tokenAmount ? tshareLPStats?.tokenAmount : '-.--'} SNOSHARE /{' '}
-                  {tshareLPStats?.ftmAmount ? tshareLPStats?.ftmAmount : '-.--'} wAVAX
+                  {tshareLPStats?.ftmAmount ? tshareLPStats?.ftmAmount : '-.--'} JOE
                 </span>
               </Box>
               <Box>${tshareLPStats?.priceOfOne ? tshareLPStats.priceOfOne : '-.--'}</Box>

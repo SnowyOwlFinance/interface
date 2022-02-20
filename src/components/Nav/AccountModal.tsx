@@ -30,7 +30,7 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
           <TokenSymbol symbol="TOMB" />
           <StyledBalance>
             <StyledValue>{displayTombBalance}</StyledValue>
-            <Label text="TOMB Available" />
+            <Label text="SNO Available" />
           </StyledBalance>
         </StyledBalanceWrapper>
 
@@ -38,7 +38,7 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
           <TokenSymbol symbol="HSHARE" />
           <StyledBalance>
             <StyledValue>{displayTshareBalance}</StyledValue>
-            <Label text="HSHARE Available" />
+            <Label text="SNOSHARE Available" />
           </StyledBalance>
         </StyledBalanceWrapper>
 
@@ -46,7 +46,7 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
           <TokenSymbol symbol="HBOND" />
           <StyledBalance>
             <StyledValue>{displayTbondBalance}</StyledValue>
-            <Label text="HBOND Available" />
+            <Label text="SNOBOND Available" />
           </StyledBalance>
         </StyledBalanceWrapper>
       </Balances>
