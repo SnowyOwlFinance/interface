@@ -19,6 +19,12 @@ const useStatsForPool = (bank: Bank) => {
     return () => clearInterval(refreshInterval);
   }, [setPoolAPRs, tombFinance, fetchAPRsForPool]);
 
+  if (!bank) return {
+    yearlyAPR: 0,
+    dailyAPR: 0,
+    TVL: 0
+  }
+
   return poolAPRs;
 };
 

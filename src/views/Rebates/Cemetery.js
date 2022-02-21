@@ -62,16 +62,11 @@ const Cemetery = () => {
   const cashStat = useCashPriceInEstimatedTWAP();
   const tombStats = useTombStats();
   const scalingFactor = useMemo(() => (cashStat ? Number(cashStat.priceInDollars).toFixed(4) : null), [cashStat]);
-  console.log("total banks:", banks)
   const activeBanks = banks.filter((bank) => !bank.finished);
-  console.log("active banks:", activeBanks)
-
-  console.log(cashStat)
 
   const tombPriceInFTM = useMemo(() => (tombStats ? Number(tombStats.tokenInFtm).toFixed(4) : null), [tombStats]);
 
   const rebateStats = useRebateTreasury()
-  console.log(rebateStats)
   const [claimable3omb, setClaimable3omb] = useState(0);
   const [vested, setVested] = useState(0)
 
@@ -93,7 +88,6 @@ const Cemetery = () => {
   }
 
   async function claimTomb() {
-    console.log("claiming the tomb")
     if (!window.ethereum) return
     const address = (await window.ethereum.request({ method: "eth_accounts" }))[0]
     if (!address) return

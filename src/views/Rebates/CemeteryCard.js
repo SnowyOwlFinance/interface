@@ -22,8 +22,6 @@ const useStyles = makeStyles((theme) => ({
 
 const CemeteryCard = ({ bank }) => {
 
-  console.log("creating rebate card")
-
   const tombFinance = useTombFinance();
   const classes = useStyles()
 
@@ -37,9 +35,6 @@ const CemeteryCard = ({ bank }) => {
     <DepositModal
       max={tokenBalance}
       onConfirm={async (value) => {
-        console.log("running my on confirm")
-        console.log("doing the bond")
-        console.log(BN(Math.floor(value * 10000)).mul(BN(10).pow(BN(14))).toString())
         if (!window.ethereum) return
         const account = (await window.ethereum.request({ method: "eth_accounts" }))[0]
         if (!account) return

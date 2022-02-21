@@ -36,6 +36,10 @@ const Bank: React.FC = () => {
   const { account } = useWallet();
  // const { onRedeem } = useRedeem(bank);
   const statsOnPool = useStatsForPool(bank);
+
+  if (!bank) {
+    return (<BankNotFound />);
+  }
   return account && bank ? (
     <>
       <PageHeader

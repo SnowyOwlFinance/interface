@@ -100,6 +100,9 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "17px",
       margin: "3.5%"
     }
+  },
+  black: {
+    color: "#000000 !important"
   }
 }));
 
@@ -209,10 +212,21 @@ const Nav = () => {
               </div>
               <Divider />
               <List>
-                <ListItemLink primary="Home" to="/"/>
-                <ListItemLink primary="Farms" to="/farms" />
-                <ListItemLink primary="Boardroom" to="/boardroom" />
-                <ListItemLink primary="Bonds" to="/bonds" />
+              <Link color="textPrimary" to="/" className={classes.link}>
+                Home
+              </Link>
+              <Link color="textPrimary" to="/farms" className={classes.link}>
+                Farms
+              </Link>
+              <Link color="textPrimary" to="/boardroom" className={classes.link}>
+                Boardroom
+              </Link>
+              <Link color="textPrimary" to="/bonds" className={classes.link}>
+                Bonds
+              </Link>
+              <Link color="textPrimary" to="/rebates" className={classes.link}>
+                Rebates
+              </Link>
                 <ListItem button component="a" href="https://snowyowlfinance.gitbook.io/">
                   <ListItemText>Docs</ListItemText>
                 </ListItem>
