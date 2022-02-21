@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: '"Quicksand", cursive',
     color: '#161D29',
     fontSize: '18px',
-    margin: '6%',
+    margin: '5%',
     textDecoration: 'none',
     '&:hover': {
       textDecoration: 'none',
