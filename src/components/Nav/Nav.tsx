@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: 'none',
     },
   },
-  "@media only screen and (max-width: 1400px)": {
+  "@media only screen and (max-width: 1600px)": {
     logo: {
       width: "60px",
       marginRight: "12px"
@@ -211,29 +211,29 @@ const Nav = () => {
                 </IconButton>
               </div>
               <Divider />
-              <List>
+              <div style={{ width: "100%", display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center"}}>
               <Link color="textPrimary" to="/" className={classes.link}>
-                Home
+                <div style={{ margin: "4px 20px" }}>Home</div>
               </Link>
               <Link color="textPrimary" to="/farms" className={classes.link}>
-                Farms
+                <div style={{ margin: "4px 20px" }}>Farms</div>
               </Link>
               <Link color="textPrimary" to="/boardroom" className={classes.link}>
-                Boardroom
+                <div style={{ margin: "4px 20px" }}>Boardroom</div>
               </Link>
               <Link color="textPrimary" to="/bonds" className={classes.link}>
-                Bonds
+                <div style={{ margin: "4px 20px" }}>Bonds</div>
               </Link>
               <Link color="textPrimary" to="/rebates" className={classes.link}>
-                Rebates
+                <div style={{ margin: "4px 20px" }}>Rebates</div>
               </Link>
-                <ListItem button component="a" href="https://snowyowlfinance.gitbook.io/">
-                  <ListItemText>Docs</ListItemText>
-                </ListItem>
+              <a href="https://snowyowlfinance.gitbook.io/" target="_blank" className={classes.link}>
+                <div style={{ margin: "4px 20px" }}>Docs</div>
+              </a>
                 <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <AccountButton text="Connect" />
                 </ListItem>
-              </List>
+              </div>
             </Drawer>
           </>
         )}
