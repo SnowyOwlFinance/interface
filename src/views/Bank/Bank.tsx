@@ -49,7 +49,7 @@ const Bank: React.FC = () => {
         title={bank?.name}
       />
       {bank?.depositTokenName === "SNO-SNOSHARE-LP" && Date.now() < 1645509600000 ? (
-          <Alert variant="filled" severity="info" style={{ width: "400px", marginBottom: "20px", marginLeft: "auto", marginRight: "auto" }}>
+          <Alert variant="filled" severity="info" style={{ maxWidth: "400px", marginBottom: "20px", marginLeft: "auto", marginRight: "auto" }}>
           Pool starts at 1:00 AM Eastern (at next epoch)
         </Alert>
       ) : (<></>)}
