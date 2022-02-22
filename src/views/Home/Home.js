@@ -344,7 +344,7 @@ const Home = () => {
               <Button
                 color="primary"
                 target="_blank"
-                href={buyTombAddress}
+                href={"https://traderjoexyz.com/trade?outputCurrency=0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd#/"}
                 variant="contained"
                 style={{ marginTop: '10px', borderRadius:'10px', width: '100%'}}
                 className={classes.button}
