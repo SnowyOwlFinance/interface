@@ -121,21 +121,27 @@ export class TombFinance {
    * @returns
    */
   async getLPStat(name: string): Promise<LPStat> {
-    const lpToken = this.externalTokens[name];
-    const lpTokenSupplyBN = await lpToken.totalSupply();
-    const lpTokenSupply = getDisplayBalance(lpTokenSupplyBN, 18);
-    const token0 = name.startsWith("SNO-") ? this.TOMB : this.TSHARE;
-    const isTomb = name.startsWith("SNO-");
-    const tokenAmountBN = await token0.balanceOf(lpToken.address);
-    const tokenAmount = getDisplayBalance(tokenAmountBN, 18);
+    let lpToken = this.externalTokens[name];
+    let lpTokenSupplyBN = await lpToken.totalSupply();
+    let lpTokenSupply = getDisplayBalance(lpTokenSupplyBN, 18);
+    let token0 = name === "SNO-JOE-LP" ? this.TOMB : this.TSHARE;
+    let isTomb = name === "SNO-JOE-LP";
+    let tokenAmountBN = await token0.balanceOf(lpToken.address);
+    let tokenAmount = getDisplayBalance(tokenAmountBN, 18);
 
-    const ftmAmountBN = await this.FTM.balanceOf(lpToken.address);
-    const ftmAmount = getDisplayBalance(ftmAmountBN, 18);
-    const tokenAmountInOneLP = Number(tokenAmount) / Number(lpTokenSupply);
-    const ftmAmountInOneLP = Number(ftmAmount) / Number(lpTokenSupply);
-    const lpTokenPrice = await this.getLPTokenPrice(lpToken, token0, isTomb);
-    const lpTokenPriceFixed = Number(lpTokenPrice).toFixed(2).toString();
-    const liquidity = (Number(lpTokenSupply) * Number(lpTokenPrice)).toFixed(2).toString();
+    let ftmAmountBN = await this.FTM.balanceOf(lpToken.address);
+    let ftmAmount = getDisplayBalance(ftmAmountBN, 18);
+    let tokenAmountInOneLP = Number(tokenAmount) / Number(lpTokenSupply);
+    let ftmAmountInOneLP = Number(ftmAmount) / Number(lpTokenSupply);
+    let lpTokenPrice = await this.getLPTokenPrice(lpToken, token0, isTomb);
+    let lpTokenPriceFixed = Number(lpTokenPrice).toFixed(2).toString();
+    let liquidity = (Number(lpTokenSupply) * Number(lpTokenPrice)).toFixed(2).toString();
+
+    if (name === "SNO-SNOSHARE-LP") {
+        ftmAmountBN = await this.TOMB.balanceOf(lpToken.address)
+        ftmAmount = getDisplayBalance(ftmAmountBN, 18)
+        ftmAmountInOneLP = Number(ftmAmount) / Number(lpTokenSupply)
+    }
 
     return {
       tokenAmount: tokenAmountInOneLP.toFixed(2).toString(),
@@ -317,6 +323,8 @@ export class TombFinance {
         tokenPrice = await this.getLPTokenPrice(token, this.TOMB, true);
       } else if (tokenName === 'SNOSHARE-JOE-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.TSHARE, false);
+      } else if (tokenName === "SNO-SNOSHARE-LP") {
+        tokenPrice = await this.getLPTokenPrice(token, this.TSHARE, false)
       } else if (tokenName === 'SHIBA') {
         tokenPrice = await this.getTokenPriceFromSpiritswap(token);
       } else {

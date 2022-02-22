@@ -9,6 +9,7 @@ import tBondLogo from '../../assets/img/snobond.png';
 
 import tombFtmLpLogo from '../../assets/img/sno-joe.png';
 import tshareFtmLpLogo from '../../assets/img/snoshare-joe.png';
+import snoSnoShareLpLogo from "../../assets/img/sno-snoshare.png";
 
 import wftmLogo from '../../assets/img/joe.png';
 import booLogo from '../../assets/img/spooky.png';
@@ -32,6 +33,7 @@ const logosBySymbol: { [title: string]: string } = {
   SNOSHARE: tShareLogoPNG,
   'SNO-JOE-LP': tombFtmLpLogo,
   'SNOSHARE-JOE-LP': tshareFtmLpLogo,
+  "SNO-SNOSHARE-LP": snoSnoShareLpLogo
 };
 
 type LogoProps = {

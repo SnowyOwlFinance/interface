@@ -35,7 +35,7 @@ const Cemetery = () => {
           <BackgroundImage />
           {!!account ? (
             <Container maxWidth="lg">
-              <Typography color="primary.dark" align="center" variant="h2" gutterBottom>
+              <Typography color="primary.dark" align="center" variant="h2" style={{ marginTop: "-30px" }}>
                 Farms
               </Typography>
 
@@ -49,7 +49,7 @@ const Cemetery = () => {
                   </Grid>
                 </div> */}
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 2).length === 0}>
-                  <Typography color="primary.dark" align='center' variant="h4" gutterBottom style={{ marginBottom: '3%' }}>
+                  <Typography color="primary.dark" align='center' variant="h4" gutterBottom style={{ marginTop: "-25px", marginBottom: "35px" }}>
                     SNOSHARE Pools
                   </Typography>
                   <Grid container spacing={3}>
