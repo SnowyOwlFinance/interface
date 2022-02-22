@@ -17,6 +17,7 @@ import useStatsForPool from '../../hooks/useStatsForPool';
 // import useRedeem from '../../hooks/useRedeem';
 // import { Bank as BankEntity } from '../../tomb-finance';
 // import useTombFinance from '../../hooks/useTombFinance';
+import { Alert } from '@material-ui/lab';
 
 const useStyles = makeStyles((theme) => ({
   gridItem: {
@@ -47,6 +48,11 @@ const Bank: React.FC = () => {
         subtitle={`Deposit ${bank?.depositTokenName} and earn ${bank?.earnTokenName}`}
         title={bank?.name}
       />
+      {bank?.depositTokenName === "SNO-SNOSHARE-LP" && Date.now() < 1645509600000 ? (
+          <Alert variant="filled" severity="info" style={{ maxWidth: "400px", marginBottom: "20px", marginLeft: "auto", marginRight: "auto" }}>
+          Pool starts at 1:00 AM Eastern (at next epoch)
+        </Alert>
+      ) : (<></>)}
       <Box>
         <Grid container justify="center" spacing={3} style={{ marginBottom: '50px' }}>
           <Grid item xs={12} md={2} lg={3} className={classes.gridItem}>
