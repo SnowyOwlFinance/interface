@@ -10,6 +10,8 @@ const useBank = (contractName: ContractName): Bank => {
     return banks.find(bank => bank.sectionInUI === 2 && bank.depositTokenName === "SNO-JOE-LP")
   } else if (contractName === "SnoSnoShareLPSnoShareRewardPool") {
     return banks.find(bank => bank.sectionInUI === 2 && bank.depositTokenName === "SNO-SNOSHARE-LP")
+  } else if (contractName === "SnoSnoShareRewardPool") {
+    return banks.find(bank => bank.sectionInUI === 2 && bank.depositTokenName === "SNO")
   } else {
     return null
   }

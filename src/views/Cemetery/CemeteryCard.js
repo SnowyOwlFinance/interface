@@ -6,12 +6,16 @@ import Card from '../../components/Card';
 import TokenSymbol from '../../components/TokenSymbol';
 import useLpStats from '../../hooks/useLpStats';
 import { makeStyles } from '@material-ui/core/styles';
+import useCashStat from "../../hooks/useCashPriceInEstimatedTWAP.ts"
 
 const useStyles = makeStyles((theme) => ({
     third: {
       width: "50% !important",
       marginLeft: "auto",
       marginRight: "auto"
+    },
+    fullheight: {
+        height: "100% !important"
     },
     "@media only screen and (max-width: 600px)": {
         third: {
@@ -28,6 +32,7 @@ const CemeteryCard = () => {
   const tshareLPStats = useMemo(() => (tShareFtmLpStats ? tShareFtmLpStats : null), [tShareFtmLpStats]);
   const snoSnoShareLPStats = useMemo(() => (snoSnoShareLpStats ? snoSnoShareLpStats : null), [snoSnoShareLpStats])
   const classes = useStyles();
+  const snoPrice = useCashStat()
   return (
     <Grid container spacing={3}>
     <Grid item xs={12} sm={6}>
@@ -97,8 +102,7 @@ const CemeteryCard = () => {
           </CardActions>
       </Card>
       </Grid>
-      <Grid item xs={12} sm={12}>
-          <div className={classes.third}>
+      <Grid item xs={12} sm={6}>
       <Card>
         <CardContent align="center">
             <Typography variant="h5" component="h2">
@@ -131,7 +135,35 @@ const CemeteryCard = () => {
             </Button>
           </CardActions>
       </Card>
-      </div>
+      </Grid>
+      <Grid item xs={12} sm={6}>
+      <Card>
+        <CardContent align="center">
+            <Typography variant="h5" component="h2">
+            SNO
+              </Typography>
+          <Box mt={1}>
+              <TokenSymbol symbol="SNO" />
+          </Box>
+          <Box mt={2}>
+              SINGLE STAKE
+          </Box>
+          <Box>${snoPrice?.priceInDollars ? snoPrice?.priceInDollars : '-.--'}</Box>
+              <span style={{ fontSize: '12px' }}>
+                Circulating Supply: ${snoPrice?.circulatingSupply ? snoPrice?.circulatingSupply : '-.--'}
+                <br />
+                Total supply: {snoPrice?.totalSupply ? snoPrice.totalSupply : '-.--'}
+              </span>
+        </CardContent>
+        <CardActions style={{ justifyContent: 'center' }}>
+            <Button color="primary" style={{ width: '150px', height: "45px", marginBottom: '5%' }} variant="contained" component={Link} to={`/farms/SnoSnoShareRewardPool/`}>
+              Farm
+            </Button>
+            <Button color="primary" target="_blank" style={{ width: '150px', height: "45px", marginBottom: '5%' }} variant="contained" href="https://traderjoexyz.com/trade?inputCurrency=0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd&outputCurrency=0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D" >
+              Buy SNO
+            </Button>
+          </CardActions>
+      </Card>
       </Grid>
       </Grid>
   );

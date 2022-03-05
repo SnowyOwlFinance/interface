@@ -48,9 +48,9 @@ const Bank: React.FC = () => {
         subtitle={`Deposit ${bank?.depositTokenName} and earn ${bank?.earnTokenName}`}
         title={bank?.name}
       />
-      {bank?.depositTokenName === "SNO-SNOSHARE-LP" && Date.now() < 1645509600000 ? (
+      {bank?.depositTokenName === "SNO" && Date.now() < 1646510400000 ? (
           <Alert variant="filled" severity="info" style={{ maxWidth: "400px", marginBottom: "20px", marginLeft: "auto", marginRight: "auto" }}>
-          Pool starts at 1:00 AM Eastern (at next epoch)
+          Pool starts at 3:00 PM Eastern
         </Alert>
       ) : (<></>)}
       <Box>

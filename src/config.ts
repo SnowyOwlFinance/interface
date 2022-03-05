@@ -16,6 +16,7 @@ const configurations: { [env: string]: Configuration } = {
       BOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 18],
       ZOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 0],
       SHIBA: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 9],
+      "SNO": ["0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D", 18],
       'WAVAX-USDC-LP': ['0x67926d973cD8eE876aD210fAaf7DFfA99E414aCf', 18],
       'SNO-JOE-LP': ['0xE63b66A8CF7811525cd15daB15F17fb62aa5af2F', 18],
       'SNOSHARE-JOE-LP': ['0x061349a57b702ebE3139CA419457bb23f7e0D8A2', 18],
@@ -38,6 +39,7 @@ const configurations: { [env: string]: Configuration } = {
       BOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 18],
       ZOO: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 0],
       SHIBA: ['0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', 9],
+      "SNO": ["0x1fE4869f2C5181b9CD780a7E16194FA2c4C4293D", 18],
       'WAVAX-USDC-LP': ['0x67926d973cD8eE876aD210fAaf7DFfA99E414aCf', 18],
       'SNO-JOE-LP': ['0xE63b66A8CF7811525cd15daB15F17fb62aa5af2F', 18],
       'SNOSHARE-JOE-LP': ['0x061349a57b702ebE3139CA419457bb23f7e0D8A2', 18],
@@ -98,6 +100,17 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     sort: 8,
     closedForStaking: false
    },
+SnoSnoShareRewardPool: {
+    name: 'Earn SNOSHARE by SNO',
+    poolId: 5,
+    sectionInUI: 2,
+    contract: 'TombAvaxLPHShareRewardPool',
+    depositTokenName: 'SNO',
+    earnTokenName: 'SNOSHARE',
+    finished: false,
+    sort: 9,
+    closedForStaking: false
+},
  SnoJoeLPRebate: {
   name: 'Bond SNO-JOE LP for SNO',
   poolId: 100,

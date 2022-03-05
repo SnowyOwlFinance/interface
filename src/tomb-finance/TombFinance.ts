@@ -319,7 +319,9 @@ export class TombFinance {
     if (tokenName === 'JOE') {
       tokenPrice = priceOfOneFtmInDollars;
     } else {
-      if (tokenName === 'SNO-JOE-LP') {
+      if (tokenName === "SNO") {
+        tokenPrice = (await this.getTombStat()).priceInDollars;
+      } else if (tokenName === 'SNO-JOE-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.TOMB, true);
       } else if (tokenName === 'SNOSHARE-JOE-LP') {
         tokenPrice = await this.getLPTokenPrice(token, this.TSHARE, false);
