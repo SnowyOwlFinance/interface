@@ -247,9 +247,9 @@ export class TombFinance {
       bank.depositTokenName,
     );
 
-    let tokenPerHour = tokenPerSecond.mul(60).mul(60).div(3);
+    let tokenPerHour = tokenPerSecond.mul(60).mul(60).mul(3).div(8);
     if (bank.sectionInUI === 2 && bank.depositTokenName === "SNO") {
-      tokenPerHour = tokenPerHour.mul(3).div(2);
+      tokenPerHour = tokenPerHour.mul(3).div(5);
     }
     const totalRewardPricePerYear =
       Number(stat.priceInDollars) * Number(getDisplayBalance(tokenPerHour.mul(24).mul(365)));
