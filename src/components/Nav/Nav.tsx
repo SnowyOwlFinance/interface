@@ -234,7 +234,7 @@ const Nav = () => {
                 <div style={{ margin: "4px 20px" }}>Docs</div>
               </a>
                 <a href="https://arctic-fox.finance" target="_blank" className={classes.link}>
-                <div style={{ margin: "4px 20px" }}>Arctic Fox</div>
+                <div style={{ margin: "4px 20px" }}>Arctic⠀Fox</div>
               </a>
                 <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <AccountButton text="Connect" />
