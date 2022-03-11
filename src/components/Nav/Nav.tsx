@@ -168,7 +168,7 @@ const Nav = () => {
                 Docs
               </a>
               <a href="https://arctic-fox.finance/" target="_blank" rel="noopener noreferrer" className={classes.link}>
-                Arctic Fox
+                ArcticFox
               </a>
             </Box>
             <div style={{ width: "auto", marginLeft: "auto", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", marginRight: "20px" }}>
@@ -234,7 +234,7 @@ const Nav = () => {
                 <div style={{ margin: "4px 20px" }}>Docs</div>
               </a>
                 <a href="https://arctic-fox.finance" target="_blank" className={classes.link}>
-                <div style={{ margin: "4px 20px" }}>Arctic⠀Fox</div>
+                <div style={{ margin: "4px 20px" }}>ArcticFox</div>
               </a>
                 <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <AccountButton text="Connect" />
