@@ -167,6 +167,9 @@ const Nav = () => {
               <a href="https://snowyowlfinance.gitbook.io/" target="_blank" rel="noopener noreferrer" className={classes.link}>
                 Docs
               </a>
+              <a href="https://arctic-fox.finance/" target="_blank" rel="noopener noreferrer" className={classes.link}>
+                Arctic Fox
+              </a>
             </Box>
             <div style={{ width: "auto", marginLeft: "auto", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", marginRight: "20px" }}>
               <img style={{ width: 50 }} src={"/static/media/sno.5382de83.png"} />
@@ -229,6 +232,9 @@ const Nav = () => {
               </Link>
               <a href="https://snowyowlfinance.gitbook.io/" target="_blank" className={classes.link}>
                 <div style={{ margin: "4px 20px" }}>Docs</div>
+              </a>
+                <a href="https://arctic-fox.finance" target="_blank" className={classes.link}>
+                <div style={{ margin: "4px 20px" }}>Arctic Fox</div>
               </a>
                 <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <AccountButton text="Connect" />
