@@ -67,29 +67,40 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   finished: will disable the pool on the UI if set to true
   sort: the order of the pool
   */
- SnoJoeLPSnoShareRewardPool: {
-  name: 'Earn SNOSHARE by SNO-JOE LP',
-  poolId: 0,
-  sectionInUI: 2,
-  contract: 'TombAvaxLPHShareRewardPool',
-  depositTokenName: 'SNO-JOE-LP',
-  earnTokenName: 'SNOSHARE',
-  finished: false,
-  sort: 6,
-  closedForStaking: false
- },
- SnoShareJoeLPSnoShareRewardPool: {
-  name: 'Earn SNOSHARE by SNOSHARE-JOE LP',
-  poolId: 1,
-  sectionInUI: 2,
-  contract: 'TombAvaxLPHShareRewardPool',
-  depositTokenName: 'SNOSHARE-JOE-LP',
-  earnTokenName: 'SNOSHARE',
-  finished: false,
-  sort: 7,
-  closedForStaking: false
- },
- SnoSnoShareLPSnoShareRewardPool: {
+  SnoJoeLPSnoShareRewardPool: {
+    name: 'Earn SNOSHARE by SNO-JOE LP',
+    poolId: 0,
+    sectionInUI: 2,
+    contract: 'TombAvaxLPHShareRewardPool',
+    depositTokenName: 'SNO-JOE-LP',
+    earnTokenName: 'SNOSHARE',
+    finished: false,
+    sort: 6,
+    closedForStaking: true
+   },
+   SnoJoe1LPSnoShareRewardPool: {
+    name: 'Earn SNOSHARE by SNO-JOE LP',
+    poolId: 0,
+    sectionInUI: 2,
+    contract: 'TombAvaxLPHShareRewardPool',
+    depositTokenName: 'SNO-JOE-LP',
+    earnTokenName: 'SNOSHARE',
+    finished: false,
+    sort: 6,
+    closedForStaking: true
+   },
+   SnoShareJoeLPSnoShareRewardPool: {
+    name: 'Earn SNOSHARE by SNOSHARE-JOE LP',
+    poolId: 1,
+    sectionInUI: 2,
+    contract: 'TombAvaxLPHShareRewardPool',
+    depositTokenName: 'SNOSHARE-JOE-LP',
+    earnTokenName: 'SNOSHARE',
+    finished: false,
+    sort: 7,
+    closedForStaking: true
+   },
+   SnoSnoShareLPSnoShareRewardPool: {
     name: 'Earn SNOSHARE by SNO-SNOSHARE LP',
     poolId: 2,
     sectionInUI: 2,
@@ -98,7 +109,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     earnTokenName: 'SNOSHARE',
     finished: false,
     sort: 8,
-    closedForStaking: false
+    closedForStaking: true
    },
 SnoSnoShareRewardPool: {
     name: 'Earn SNOSHARE by SNO',
@@ -109,7 +120,7 @@ SnoSnoShareRewardPool: {
     earnTokenName: 'SNOSHARE',
     finished: false,
     sort: 9,
-    closedForStaking: false
+    closedForStaking: true
 },
  SnoJoeLPRebate: {
   name: 'Bond SNO-JOE LP for SNO',

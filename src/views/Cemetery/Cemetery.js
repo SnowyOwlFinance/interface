@@ -3,6 +3,7 @@ import { useWallet } from 'use-wallet';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import Bank from '../Bank';
 
+import { Alert } from '@material-ui/lab';
 import { Box, Container, Typography, Grid } from '@material-ui/core';
 
 
@@ -52,6 +53,9 @@ const Cemetery = () => {
                   <Typography color="primary.dark" align='center' variant="h4" gutterBottom style={{ marginTop: "-25px", marginBottom: "35px" }}>
                     SNOSHARE Pools
                   </Typography>
+                  <Alert variant="filled" severity="info" style={{ marginTop: "-25px", marginBottom: "35px" }}>
+                    All below pools have ended. Please unstake and stake at <a style={{ color: "#fff" }} href="https://arctic-fox.finance/farms">Arctic Fox.</a>
+                  </Alert>
                   <Grid container spacing={3}>
                     <CemeteryCard />
                   </Grid>
