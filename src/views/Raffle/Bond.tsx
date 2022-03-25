@@ -72,9 +72,9 @@ const useStyles = makeStyles((theme) => ({
 
 const Bond: React.FC = () => {
 
-  const startDate = new Date('2022-3-19 09:00:00Z');
-  const endDate = new Date('2022-3-22 09:00:00Z');
-  const raffleAddress = '0xA3F2C4D813d75E26335ddE70DcFd703996Ae25D8';
+  const startDate = new Date('2022-3-25 17:00:00Z');
+  const endDate = new Date('2022-3-28 17:00:00Z');
+  const raffleAddress = '0x204a1c51573df9928c5caa296ada26a3643f4f55';
 
 
 
@@ -135,7 +135,7 @@ const Bond: React.FC = () => {
         <Grid item xs={12} sm={12} lg={6}>  
             <Card style={{color: '#000'}}>
               <h2 style={{textAlign:'center', marginTop: '10px', color: '#000' }}>Raffle Stats</h2>
-              <p style={{textAlign:'center'}}>Win 20 Snoshare this raffle</p>           
+              <p style={{textAlign:'center'}}>Win 25 Snoshare this raffle</p>           
               <p style={{textAlign:'center'}}>Sno Price: ${grapePrice}</p>
               <p style={{textAlign:'center'}}>Total Sno Entered: {raffleBals}</p>         
               <p style={{textAlign:'center'}}>Your entries: {userBals}</p>
