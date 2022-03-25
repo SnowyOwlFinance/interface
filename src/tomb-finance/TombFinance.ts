@@ -152,6 +152,43 @@ export class TombFinance {
     };
   }
 
+  async sendTomb(amount: string | number, recepient: string): Promise<TransactionResponse> {
+    const {tomb} = this.contracts;
+    
+    return await tomb.transfer(recepient, decimalToBalance(amount));
+  }
+
+  async getRaffleStat(account: string, raffleAddress: string): Promise<TokenStat> {
+    let total = 0;
+    const {tomb} = this.contracts;
+    
+    const priceInBTC = await this.getTokenPriceFromPancakeswap(this.TOMB);
+    
+    const balOfRaffle = await tomb.balanceOf(raffleAddress);
+    
+    const currentBlockNumber = await this.provider.getBlockNumber();
+    
+    const filterTo = tomb.filters.Transfer(account, raffleAddress);
+   
+    const logsTo = await tomb.queryFilter(filterTo, -2000, currentBlockNumber);
+ 
+    if (logsTo.length !== 0 && account !== null) {
+      for (let i = 0; i < logsTo.length; i++) {
+        total = total + Number(logsTo[i].args.value);
+      }
+      total = total / 1e18;
+    } else {
+      total = 0;
+    }
+    
+    return {
+      tokenInFtm: priceInBTC.toString(),
+      priceInDollars: total.toString(),
+      totalSupply: getDisplayBalance(balOfRaffle, 18, 0),
+      circulatingSupply: raffleAddress.toString(),
+    };
+  }
+
   /**
    * Use this method to get price for Tomb
    * @returns TokenStat for TBOND

@@ -39,6 +39,16 @@ body {
   height: 100%;
 }
 
+.shinyButtonDisabled{
+  color: #fff !important;
+  background-color: #ccc !important;
+}
+
+.shinyButton{
+  color: #fff !important;
+  background-color: #000 !important;
+}
+
 .makeStyles-paper-11,
 .makeStyles-paper-11 h2,
 .MuiTypography-body1,

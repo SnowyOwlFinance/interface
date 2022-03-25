@@ -161,6 +161,9 @@ const Nav = () => {
               <Link color="textPrimary" to="/rebates" className={classes.link}>
                 Rebates
               </Link>
+              <Link color="textPrimary" to="/raffle" className={classes.link}>
+                Raffle
+              </Link>
               <a href="https://yieldwolf.finance/avalanche/snowy-owl/" target="_blank" rel="noopener noreferrer" className={classes.link}>
                 Compound
               </a>
@@ -229,6 +232,9 @@ const Nav = () => {
               </Link>
               <Link color="textPrimary" to="/rebates" className={classes.link}>
                 <div style={{ margin: "4px 20px" }}>Rebates</div>
+              </Link>
+              <Link color="textPrimary" to="/raffle" className={classes.link}>
+                <div style={{ margin: "4px 20px" }}>Raffle</div>
               </Link>
               <a href="https://snowyowlfinance.gitbook.io/" target="_blank" className={classes.link}>
                 <div style={{ margin: "4px 20px" }}>Docs</div>
