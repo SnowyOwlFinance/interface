@@ -100,8 +100,8 @@ const Masonry = () => {
               <Grid item xs={12} md={2} lg={2} className={classes.gridItem}>
                 <Card style={{background: '#161414', borderRadius: '15px', height: '100px'}} className={classes.gridItem}>
                   <CardContent align="center">
-                    <h3 style={{ textAlign: 'center', color: '#5686d6', fontSize:'18px'}}>APR</h3>
-                    <h2 style={{ fontWeight: 'lighter'}}>{masonryAPR.toFixed(2)}%</h2>
+                  <h3 style={{ textAlign: 'center', color: '#5686d6', fontSize:'18px'}}>APR | Daily</h3>
+                  <h2 style={{ fontWeight: 'lighter'}}>{masonryAPR.toFixed(2)}% | {(masonryAPR/365).toFixed(2)}%</h2>
                   </CardContent>
                 </Card>
               </Grid>
